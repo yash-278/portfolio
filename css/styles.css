@@ -335,18 +335,25 @@ p {
     margin-right: 15%;
   }
   h1 {
+    margin-top: 80px;
     font-size: 2rem;
+    text-align: center;
   }
   p {
     font-size: 0.7rem;
+    text-align: center;
   }
   .contact-btn {
+    margin-top: 20px;
     font-size: 15px;
+    left: 12%;
+  }
+  .Animation {
+    margin-top: 70px;
   }
   .Animation,
   .animated-text,
   .love {
-    margin-top: 45px;
     position: relative;
   }
   .animated-text,
@@ -359,12 +366,14 @@ p {
     font-size: 15px;
   }
   .love {
+    left: 27%;
     font-size: 250%;
+    text-align: center;
   }
   .animated-text {
-    position: absolute;
+    top: -30px;
+    left: 24%;
     width: 150px;
-    left: 45%;
     height: 60px;
     bottom: 0;
   }
