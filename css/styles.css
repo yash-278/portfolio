@@ -1,3 +1,9 @@
+/* ===========================================================BootStrap Navbar Visiblity=================================== */
+#navig {
+  visibility: hidden;
+  transition: 0.5s;
+}
+/* =====================================================Basic CSS========================================================== */
 body {
   background-color: #212121;
   text-decoration: none;
@@ -18,11 +24,7 @@ p {
   letter-spacing: 3px;
   font-size: 1rem;
 }
-#navig {
-  visibility: hidden;
-  transition: 0.5s;
-}
-/*--------------------------------------------- Contact Button With Snake Animation-------------------------------------------------- */
+/*--------------------------------------------- Contact Button With Snake Animation------------------------------------------- */
 .contact-btn {
   margin-left: 15%;
   position: relative;
@@ -96,7 +98,7 @@ p {
   transition: 1s;
   transition-delay: 0.75s;
 }
-/* ----------------------------------------------------------The sidebar menu-------------------------------------------------------- */
+/* ----------------------------------------------------------The sidebar menu------------------------------------------------ */
 #mySidenav a {
   z-index: 1;
   margin: 12.5% 0;
@@ -163,7 +165,7 @@ p {
 .Envelope {
   margin-left: 26.5%;
 }
-/* ------------------------------------------------------------I Love animation ------------------------------------------------------*/
+/* ------------------------------------------------------------I Love animation ----------------------------------------------*/
 .love {
   color: #fff;
   position: absolute;
@@ -234,8 +236,8 @@ p {
   font-weight: bold;
   font-size: 5rem;
 } */
-/* ==================================================================responsive====================================================== */
-/* For Large to Medium Screen Devices */
+/* ==================================================================responsive=============================================== */
+/*=================================================== For Large Screen Devices =====================================*/
 @media screen and (max-width :1400px) {
   .animated-text {
     transition: 0.3s;
@@ -253,8 +255,34 @@ p {
     margin-left: 15%;
   } */
 }
-/* For Medium to Small Screen Devices */
 @media screen and (max-width :1300px) {
+  #mySidenav {
+    transition: 0.5s;
+    visibility: hidden;
+  }
+  #navig {
+    visibility: visible;
+    transition: 0.5s;
+  }
+  .animated-text {
+    transition: 0.3s;
+    left: 75%;
+    position: absolute;
+    width: 200px;
+    bottom: 52%;
+  }
+  .love {
+    font-size: 350%;
+    transition: 0.3s;
+    left: 55%;
+    bottom: 51%;
+  }
+  .animation {
+    font-size: 25px;
+  }
+}
+/* ===============================================For Large to Medium Screen Devices ==========================================*/
+@media screen and (max-width :930px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -275,7 +303,20 @@ p {
     margin-left: 15%;
     margin-right: 15%;
   }
+  .animation {
+    font-size: 25px;
+  }
+  .love {
+    font-size: 350%;
+  }
+  .animated-text {
+    position: absolute;
+    width: 200px;
+    left: 45%;
+    bottom: 15px;
+  }
 }
+/* ===========================================For Medium to Small Screen Devices============================================= */
 @media screen and (max-width :576px) {
   #mySidenav {
     transition: 0.5s;
@@ -319,9 +360,10 @@ p {
     position: absolute;
     width: 200px;
     left: 45%;
-    bottom: 0;
+    bottom: 10px;
   }
 }
+/* ===========================================For Small Screen Devices============================================= */
 @media screen and (max-width :435px) {
   #mySidenav {
     transition: 0.5s;
@@ -367,6 +409,8 @@ p {
     text-align: center;
   }
   .animated-text {
+    margin: 25px auto;
+    left: 0;
     top: -30px;
     width: 270px;
     height: 60px;

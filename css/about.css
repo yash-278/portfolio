@@ -1,3 +1,7 @@
+#navig {
+  visibility: hidden;
+  transition: 0.5s;
+}
 body {
   background-color: #212121;
   text-decoration: none;
@@ -73,14 +77,14 @@ img {
   background-color: #17a2b8;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
   }
   .sidenav a {
     font-size: 18px;
   }
-}
+} */
 /*navbar icons*/
 .Home {
   margin-left: 35%;
@@ -101,7 +105,7 @@ img {
 .about-para {
   width: 40%;
   margin-left: 15%;
-  margin-top: 14%;
+  margin-top: 10.5%;
 }
 /* =============================================Animated Skills====================================================================== */
 .animation {
@@ -147,5 +151,67 @@ img {
   }
   100% {
     margin-top: 30px;
+  }
+}
+@media screen and (max-width :1350px) {
+  #mySidenav {
+    transition: 0.5s;
+    visibility: hidden;
+  }
+  #navig {
+    visibility: visible;
+    transition: 0.5s;
+  }
+}
+@media screen and (max-width :740px) {
+  #mySidenav {
+    transition: 0.5s;
+    visibility: hidden;
+  }
+  #navig {
+    visibility: visible;
+    transition: 0.5s;
+  }
+  .animated-skills {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    left: 1px;
+  }
+  .about-para {
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+    margin-top: 10.5%;
+  }
+}
+@media screen and (max-width :435px) {
+  #mySidenav {
+    transition: 0.5s;
+    visibility: hidden;
+  }
+  #navig {
+    visibility: visible;
+    transition: 0.5s;
+  }
+  .animated-skills {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    left: 1px;
+  }
+  .about-para {
+    width: 80%;
+    height: auto;
+    margin-left: 15%;
+    margin-top: 10.5%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.8rem;
   }
 }
