@@ -1,0 +1,151 @@
+body {
+  background-color: #212121;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+h1 {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #fff;
+  color: #2196f3;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #8d8d8d;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+img {
+  width: 150px;
+}
+/* ----------------------------------------------------------The sidebar menu-------------------------------------------------------- */
+#mySidenav a {
+  z-index: 1;
+  margin-top: 12.5%;
+  position: absolute;
+  /* Position them relative to the browser window */
+  left: -100px;
+  /* Position them outside of the screen */
+  transition: 0.3s;
+  /* Add transition on hover */
+  padding: 15px;
+  /* 15px padding */
+  width: 12%;
+  /* Set a specific width */
+  text-decoration: none;
+  /* Remove underline */
+  font-size: 20px;
+  /* Increase font size */
+  color: white;
+  /* White text color */
+  border-radius: 0 5px 5px 0;
+  /* Rounded corners on the top right and bottom right side */
+}
+#mySidenav a:hover {
+  left: 0;
+  /* On mouse-over, make the elements appear as they should */
+}
+/* The about link: 20px from the top with a green background */
+#home {
+  float: left;
+  top: 20px;
+  background-color: #4CAF50;
+}
+#about {
+  top: 100px;
+  background-color: #2196F3;
+  /* Blue */
+}
+#skills {
+  top: 180px;
+  background-color: #f44336;
+  /* Red */
+}
+#my-work {
+  top: 260px;
+  /* Light Black */
+  background-color: #555;
+}
+#contact {
+  top: 340px;
+  background-color: #17a2b8;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+/*navbar icons*/
+.Home {
+  margin-left: 35%;
+}
+.User {
+  margin-left: 36%;
+}
+.Skills {
+  margin-left: 42%;
+}
+.Eye {
+  margin-left: 18%;
+}
+.Envelope {
+  margin-left: 26.5%;
+}
+/* ========================================About Paragraph============================================================================ */
+.about-para {
+  width: 40%;
+  margin-left: 15%;
+  margin-top: 14%;
+}
+/* =============================================Animated Skills====================================================================== */
+.animation {
+  margin: 35px 0;
+}
+.animated-skills {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  transform: translate(-50,-50);
+  padding: 0 40px;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+.animation:first-child {
+  animation: anim 15s infinite;
+}
+@keyframes anim {
+  0% {
+    margin-top: 30px;
+  }
+  12.5% {
+    margin-top: -170px;
+  }
+  25% {
+    margin-top: -350px;
+  }
+  37.5% {
+    margin-top: -530px;
+  }
+  50% {
+    margin-top: -720px;
+  }
+  62.5% {
+    margin-top: -530px;
+  }
+  75% {
+    margin-top: -350px;
+  }
+  87.5% {
+    margin-top: -170px;
+  }
+  100% {
+    margin-top: 30px;
+  }
+}

@@ -1,12 +1,13 @@
 body {
   background-color: #212121;
   text-decoration: none;
+  height: 100%;
 }
 h1 {
   font-family: 'Lexend Deca', sans-serif;
   font-weight: bold;
   margin-left: 15%;
-  margin-top: 17%;
+  margin-top: 12%;
   font-size: 3rem;
   color: #fff;
 }
@@ -16,6 +17,10 @@ p {
   color: #8d8d8d;
   letter-spacing: 3px;
   font-size: 1rem;
+}
+#navig {
+  visibility: hidden;
+  transition: 0.5s;
 }
 /*--------------------------------------------- Contact Button With Snake Animation-------------------------------------------------- */
 .contact-btn {
@@ -28,10 +33,13 @@ p {
   letter-spacing: 4px;
   text-decoration: none !important;
   font-size: 24px;
+  /* border: solid;
+  border-color: #2196f3; */
   overflow: hidden;
   transition: 0.2s;
 }
 .contact-btn:hover {
+  border: hidden;
   color: #255784;
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
@@ -91,14 +99,14 @@ p {
 /* ----------------------------------------------------------The sidebar menu-------------------------------------------------------- */
 #mySidenav a {
   z-index: 1;
-  margin-top: 12.5%;
+  margin: 12.5% 0;
   position: absolute;
   /* Position them relative to the browser window */
-  left: -100px;
+  left: -6.5%;
   /* Position them outside of the screen */
   transition: 0.3s;
   /* Add transition on hover */
-  padding: 15px;
+  padding: 1%;
   /* 15px padding */
   width: 12%;
   /* Set a specific width */
@@ -117,7 +125,6 @@ p {
 }
 /* The about link: 20px from the top with a green background */
 #home {
-  float: left;
   top: 20px;
   background-color: #4CAF50;
 }
@@ -140,15 +147,6 @@ p {
   top: 340px;
   background-color: #17a2b8;
 }
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
 /*navbar icons*/
 .Home {
   margin-left: 35%;
@@ -160,7 +158,7 @@ p {
   margin-left: 42%;
 }
 .Eye {
-  margin-left: 18%;
+  margin-left: 40%;
 }
 .Envelope {
   margin-left: 26.5%;
@@ -173,9 +171,11 @@ p {
   left: 57%;
   font-family: 'Lexend Deca', sans-serif;
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 500%;
+  transition: 0.3s;
 }
 .animated-text {
+  transition: 0.3s;
   color: #fff;
   position: absolute;
   bottom: 50%;
@@ -225,7 +225,7 @@ p {
     margin-top: 0;
   }
 }
-.full-stop {
+/* .full-stop {
   color: #fff;
   position: absolute;
   bottom: 47%;
@@ -233,4 +233,45 @@ p {
   font-family: 'Lexend Deca', sans-serif;
   font-weight: bold;
   font-size: 5rem;
+} */
+/* ==================================================================responsive====================================================== */
+/* For Large to Medium Screen Devices */
+@media screen and (max-width :1400px) {
+  .animated-text {
+    transition: 0.3s;
+    left: 70%;
+    position: absolute;
+    width: 300px;
+  }
+  .love {
+    transition: 0.3s;
+    left: 50%;
+    position: absolute;
+  }
+  /* .Animation {
+    width: 700px;
+    margin-left: 15%;
+  } */
+}
+/* For Medium to Small Screen Devices */
+@media screen and (max-width :1300px) {
+  #mySidenav {
+    transition: 0.5s;
+    visibility: hidden;
+  }
+  #navig {
+    visibility: visible;
+    transition: 0.5s;
+  }
+  .Animation,
+  .animated-text,
+  .love {
+    position: relative;
+  }
+  .animated-text,
+  .love {
+    left: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
