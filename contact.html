@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Kadam</title>
+    <title></title>
+
     <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="fontawesome/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <!--load all styles -->
+    <link rel="stylesheet" href="css/contact.css">
+
   </head>
+
   <body>
+
+    <!-- Bootstrap Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="navig">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,27 +39,13 @@
               <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="cotact.html">Contact
+            <a class="nav-link active" href="contact.html">Contact
               <span class="sr-only">(current)</span></a>
           </li>
 
         </ul>
       </div>
     </nav>
-    <div class="main">
-
-      <h1>Hi ,<br>I'm Yash
-        <br>Web Developer.</h1>
-      <p>Front End Developer</p>
-      <a class="contact-btn" href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        CONTACT ME
-      </a>
-    </div>
-
     <!-- Side navigation -->
     <div id="mySidenav" class="sidenav">
       <a href="index.html" id="home">Home
@@ -74,26 +65,25 @@
       </a>
     </div>
 
-    <!-- I Love ..... Animation -->
-    <div class="Animation">
+    <!-- Contact form section -->
+    <div class="contact-section">
 
-      <span class="love">
-        I Love
-      </span>
-      <div class="animated-text">
-        <div class="animation">HTML 5</div>
-        <div class="animation">CSS 3</div>
-        <div class="animation">BootStrap</div>
-        <div class="animation">JavaScript</div>
-        <div class="animation">jQuery</div>
-      </div>
+      <h1>Contact Me</h1>
+      <div class="border"></div>
+      <form class="contact-form" action="mailto:yashkadam278@gmail.com" method="post" enctype="text/plain">
+        <input type="text" class="contact-form-text" placeholder="Your name" name="Name : " value="">
+        <input type="email" class="contact-form-text" placeholder="Your email" name="Email : " value="">
+        <!-- <input type="text" class="contact-form-text" placeholder="Your phone"> -->
+        <textarea class="contact-form-text" placeholder="Your message" name="Message : "></textarea>
+        <input type="submit" class="contact-form-btn" value="Send">
+      </form>
     </div>
-    <!-- <div class="full-stop"> . </div> -->
     <!--Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="index.js" charset="utf-8"></script>
+
   </body>
+
 </html>

@@ -1,0 +1,144 @@
+/* ===========================================================BootStrap Navbar Visiblity=================================== */
+#navig {
+  visibility: hidden;
+  transition: 0.5s;
+}
+/* ----------------------------------------------------------The sidebar menu------------------------------------------------ */
+#mySidenav a {
+  z-index: 1;
+  margin: 12.5% 0;
+  position: absolute;
+  /* Position them relative to the browser window */
+  left: -6.5%;
+  /* Position them outside of the screen */
+  transition: 0.3s;
+  /* Add transition on hover */
+  padding: 1%;
+  /* 15px padding */
+  width: 12%;
+  /* Set a specific width */
+  text-decoration: none;
+  /* Remove underline */
+  font-size: 20px;
+  /* Increase font size */
+  color: white;
+  /* White text color */
+  border-radius: 0 5px 5px 0;
+  /* Rounded corners on the top right and bottom right side */
+}
+#mySidenav a:hover {
+  left: 0;
+  /* On mouse-over, make the elements appear as they should */
+}
+/* The about link: 20px from the top with a green background */
+#home {
+  top: 20px;
+  background-color: #4CAF50;
+}
+#about {
+  top: 100px;
+  background-color: #2196F3;
+  /* Blue */
+}
+#skills {
+  top: 180px;
+  background-color: #f44336;
+  /* Red */
+}
+#my-work {
+  top: 260px;
+  /* Light Black */
+  background-color: #555;
+}
+#contact {
+  top: 340px;
+  background-color: #17a2b8;
+}
+/*navbar icons*/
+.Home {
+  margin-left: 35%;
+}
+.User {
+  margin-left: 36%;
+}
+.Skills {
+  margin-left: 42%;
+}
+.Eye {
+  margin-left: 40%;
+}
+.Envelope {
+  margin-left: 26.5%;
+}
+/* ===============================================================================Contact Form CSS======================================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  background-color: #212121;
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-section {
+  padding: 40px 0;
+  /* height: 100vh; */
+}
+.contact-section h1 {
+  text-align: center;
+  color: #ddd;
+}
+.border {
+  width: 100px;
+  height: 1px;
+  background: #34495e;
+  margin: 40px auto;
+}
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.contact-form-text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+.contact-form-text:focus {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+textarea.contact-form-text {
+  resize: none;
+  height: 120px;
+}
+.contact-form-btn {
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact-form-btn:hover {
+  background: #2980b9;
+}
+/* For small screen devices */
+@media screen and (max-width :1300px) {
+  #mySidenav {
+    transition: 0.5s;
+    visibility: hidden;
+  }
+  #navig {
+    visibility: visible;
+    transition: 0.5s;
+  }
