@@ -8,9 +8,10 @@ body {
   background-color: #212121;
   text-decoration: none;
   height: 100%;
+  min-height: 100vh;
 }
 h1 {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: bold;
   margin-left: 15%;
   margin-top: 12%;
@@ -18,7 +19,7 @@ h1 {
   color: #fff;
 }
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin-left: 15%;
   color: #8d8d8d;
   letter-spacing: 3px;
@@ -44,7 +45,7 @@ p {
   border: hidden;
   color: #255784;
   background: #2196f3;
-  box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
   transition-delay: 1s;
 }
 .contact-btn span {
@@ -56,7 +57,7 @@ p {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent,#2196f3);
+  background: linear-gradient(90deg, transparent, #2196f3);
 }
 .contact-btn:hover span:nth-child(1) {
   left: 100%;
@@ -67,7 +68,7 @@ p {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent,#2196f3);
+  background: linear-gradient(270deg, transparent, #2196f3);
 }
 .contact-btn:hover span:nth-child(3) {
   right: 100%;
@@ -79,7 +80,7 @@ p {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent,#2196f3);
+  background: linear-gradient(180deg, transparent, #2196f3);
 }
 .contact-btn:hover span:nth-child(2) {
   top: 100%;
@@ -91,7 +92,7 @@ p {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent,#2196f3);
+  background: linear-gradient(360deg, transparent, #2196f3);
 }
 .contact-btn:hover span:nth-child(4) {
   bottom: 100%;
@@ -128,11 +129,11 @@ p {
 /* The about link: 20px from the top with a green background */
 #home {
   top: 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 #about {
   top: 100px;
-  background-color: #2196F3;
+  background-color: #2196f3;
   /* Blue */
 }
 #skills {
@@ -171,7 +172,7 @@ p {
   position: absolute;
   bottom: 47%;
   left: 57%;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: bold;
   font-size: 500%;
   transition: 0.3s;
@@ -183,10 +184,10 @@ p {
   bottom: 50%;
   left: 75%;
   background: #2980b9;
-  transform: translate(-50,-50);
+  transform: translate(-50, -50);
   padding: 0 40px;
   height: 60px;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: bold;
   overflow: hidden;
 }
@@ -236,9 +237,111 @@ p {
   font-weight: bold;
   font-size: 5rem;
 } */
+
+/* ==========================================Social Icons====================================================== */
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-top: 30px;
+  width: 100%;
+  height: 150px;
+  color: white;
+  text-align: center;
+}
+.social {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+}
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: auto 30px;
+  line-height: 50px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.social li a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(1),
+.social li a span:nth-child(3) {
+  width: 100%;
+  height: 1px;
+  background: whitesmoke;
+}
+.social li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+.social li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+.social li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(2),
+.social li a span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  background: whitesmoke;
+}
+.social li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.social li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+.social li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
 /* ==================================================================responsive=============================================== */
 /*=================================================== For Large Screen Devices =====================================*/
-@media screen and (max-width :1400px) {
+@media screen and (max-width: 1400px) {
   .animated-text {
     transition: 0.3s;
     left: 70%;
@@ -255,7 +358,7 @@ p {
     margin-left: 15%;
   } */
 }
-@media screen and (max-width :1300px) {
+@media screen and (max-width: 1300px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -282,7 +385,7 @@ p {
   }
 }
 /* ===============================================For Large to Medium Screen Devices ==========================================*/
-@media screen and (max-width :930px) {
+@media screen and (max-width: 930px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -317,7 +420,7 @@ p {
   }
 }
 /* ===========================================For Medium to Small Screen Devices============================================= */
-@media screen and (max-width :576px) {
+@media screen and (max-width: 576px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -364,7 +467,7 @@ p {
   }
 }
 /* ===========================================For Small Screen Devices============================================= */
-@media screen and (max-width :435px) {
+@media screen and (max-width: 435px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -415,5 +518,9 @@ p {
     width: 270px;
     height: 60px;
     bottom: 0;
+  }
+  /* Social buttons */
+  .social li a {
+    margin: auto 15px;
   }
 }

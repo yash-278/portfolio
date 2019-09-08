@@ -13,10 +13,10 @@ body {
   min-height: 100vh;
 }
 h3 {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 /* ----------------------------------------------------------The sidebar menu------------------------------------------------ */
 #mySidenav a {
@@ -48,11 +48,11 @@ p {
 /* The about link: 20px from the top with a green background */
 #home {
   top: 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 #about {
   top: 100px;
-  background-color: #2196F3;
+  background-color: #2196f3;
   /* Blue */
 }
 #skills {
@@ -85,7 +85,7 @@ p {
 .Envelope {
   margin-left: 26.5%;
 }
-@media screen and (max-width :1300px) {
+@media screen and (max-width: 1300px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -123,12 +123,12 @@ p {
   background: #202060;
 }
 .inner h1 {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   color: white;
   margin: 0;
 }
 .inner p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
   margin-top: 5px;
   font-size: 0.8rem;
@@ -139,7 +139,7 @@ p {
   font-weight: bold;
   transition: color 0.5s;
   position: relative;
-  margin-top: 3.5%;
+  margin-top: 4%;
   margin-right: 4.5%;
 }
 .inner:hover .i {
@@ -166,7 +166,7 @@ p {
   height: 400px;
   margin: 15px;
   background: #000;
-  box-shadow: 0 30px 30px rgba(0 , 0, 0, 0.5);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
 }
 .box .imgBox {
   position: absolute;
@@ -244,7 +244,7 @@ p {
   border: hidden;
   color: #255784;
   background: #2196f3;
-  box-shadow: 0 0 10px #2196f3,0 0 40px #2196f3,0 0 80px #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
   transition-delay: 1s;
 }
 .contact-btn span {
@@ -256,7 +256,7 @@ p {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent,#2196f3);
+  background: linear-gradient(90deg, transparent, #2196f3);
 }
 .contact-btn:hover span:nth-child(1) {
   left: 100%;
@@ -267,7 +267,7 @@ p {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent,#2196f3);
+  background: linear-gradient(270deg, transparent, #2196f3);
 }
 .contact-btn:hover span:nth-child(3) {
   right: 100%;
@@ -279,7 +279,7 @@ p {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent,#2196f3);
+  background: linear-gradient(180deg, transparent, #2196f3);
 }
 .contact-btn:hover span:nth-child(2) {
   top: 100%;
@@ -291,7 +291,7 @@ p {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent,#2196f3);
+  background: linear-gradient(360deg, transparent, #2196f3);
 }
 .contact-btn:hover span:nth-child(4) {
   bottom: 100%;

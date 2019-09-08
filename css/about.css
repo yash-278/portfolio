@@ -9,14 +9,14 @@ body {
   width: 100%;
 }
 h1 {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: bold;
   font-size: 3rem;
   color: #fff;
   color: #2196f3;
 }
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #8d8d8d;
   letter-spacing: 2px;
   font-size: 1rem;
@@ -55,11 +55,11 @@ img {
 #home {
   float: left;
   top: 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 #about {
   top: 100px;
-  background-color: #2196F3;
+  background-color: #2196f3;
   /* Blue */
 }
 #skills {
@@ -76,15 +76,7 @@ img {
   top: 340px;
   background-color: #17a2b8;
 }
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-/* @media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-} */
+
 /*navbar icons*/
 .Home {
   margin-left: 35%;
@@ -115,7 +107,7 @@ img {
   position: absolute;
   top: 40%;
   left: 70%;
-  transform: translate(-50,-50);
+  transform: translate(-50, -50);
   padding: 0 40px;
   height: 200px;
   width: 200px;
@@ -153,7 +145,110 @@ img {
     margin-top: 30px;
   }
 }
-@media screen and (max-width :1350px) {
+/* ==================================Social button======================================= */
+/* ==========================================Social Icons====================================================== */
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  /* background-color: red; */
+  color: white;
+  text-align: center;
+}
+.social {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+}
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: auto 30px;
+  line-height: 50px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.social li a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(1),
+.social li a span:nth-child(3) {
+  width: 100%;
+  height: 1px;
+  background: whitesmoke;
+}
+.social li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+.social li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+.social li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(2),
+.social li a span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  background: whitesmoke;
+}
+.social li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.social li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+.social li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+/* ==================================Media Queries =======================================*/
+@media screen and (max-width: 1350px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -163,7 +258,7 @@ img {
     transition: 0.5s;
   }
 }
-@media screen and (max-width :740px) {
+@media screen and (max-width: 740px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -186,7 +281,7 @@ img {
     margin-top: 10.5%;
   }
 }
-@media screen and (max-width :435px) {
+@media screen and (max-width: 435px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -213,5 +308,9 @@ img {
   }
   p {
     font-size: 0.8rem;
+  }
+  /* Social buttons */
+  .social li a {
+    margin: auto 15px;
   }
 }

@@ -33,11 +33,11 @@
 /* The about link: 20px from the top with a green background */
 #home {
   top: 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 #about {
   top: 100px;
-  background-color: #2196F3;
+  background-color: #2196f3;
   /* Blue */
 }
 #skills {
@@ -74,7 +74,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "montserrat",sans-serif;
+  font-family: "montserrat", sans-serif;
   background-color: #212121;
   background-image: url("bg.png");
   background-repeat: no-repeat;
@@ -132,8 +132,109 @@ textarea.contact-form-text {
 .contact-form-btn:hover {
   background: #2980b9;
 }
+
+/* ==========================================Social Icons====================================================== */
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  color: white;
+  text-align: center;
+}
+.social {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+}
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: auto 30px;
+  line-height: 50px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.social li a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(1),
+.social li a span:nth-child(3) {
+  width: 100%;
+  height: 1px;
+  background: whitesmoke;
+}
+.social li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+.social li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+.social li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(2),
+.social li a span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  background: whitesmoke;
+}
+.social li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.social li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.social li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+.social li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
 /* For small screen devices */
-@media screen and (max-width :1300px) {
+@media screen and (max-width: 1300px) {
   #mySidenav {
     transition: 0.5s;
     visibility: hidden;
@@ -142,3 +243,11 @@ textarea.contact-form-text {
     visibility: visible;
     transition: 0.5s;
   }
+}
+
+@media screen and (max-width: 435px) {
+  /* Social buttons */
+  .social li a {
+    margin: auto 15px;
+  }
+}
