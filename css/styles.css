@@ -1,199 +1,124 @@
-/* ===========================================================BootStrap Navbar Visiblity=================================== */
-#navig {
-  visibility: hidden;
-  transition: 0.5s;
-}
-/* =====================================================Basic CSS========================================================== */
 body {
-  background-color: #212121;
-  text-decoration: none;
-  height: 100%;
-  min-height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  background: #232931;
+  color: white;
 }
-h1 {
+
+.content {
+  grid-area: main-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  justify-content: center;
+  background-color: #393e46;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #323643;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "sidebar" "main-content" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 85px 525px 140px;
+}
+
+.content,
+.sidebar {
+  padding: 1em;
+}
+nav {
+  margin: 0;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+nav li {
+  list-style: none;
+  padding: 1em 0;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+nav li a {
+  color: #4ecca3 !important;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+nav li:hover {
+  opacity: 1;
+  color: #4ecca3 !important;
+}
+
+/* main */
+
+.main {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.title {
   font-family: "Lexend Deca", sans-serif;
   font-weight: bold;
-  margin-left: 15%;
-  margin-top: 12%;
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: #fff;
 }
-p {
+
+.subtitle {
   font-family: "Open Sans", sans-serif;
-  margin-left: 15%;
   color: #8d8d8d;
   letter-spacing: 3px;
   font-size: 1rem;
+  opacity: 0;
+  transition: all 1s ease;
 }
-/*--------------------------------------------- Contact Button With Snake Animation------------------------------------------- */
-.contact-btn {
-  margin-left: 15%;
-  position: relative;
-  display: inline-block;
-  padding: 15px 30px;
-  color: #2196f3;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-decoration: none !important;
-  font-size: 24px;
-  /* border: solid;
-  border-color: #2196f3; */
-  overflow: hidden;
-  transition: 0.2s;
+
+/* *======================= I Love Animation ============================================= */
+.Animation {
+  text-align: center;
+  opacity: 0;
+  transition: all 1s ease;
 }
-.contact-btn:hover {
-  border: hidden;
-  color: #255784;
-  background: #2196f3;
-  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-  transition-delay: 1s;
-}
-.contact-btn span {
-  position: absolute;
-  display: block;
-}
-.contact-btn span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #2196f3);
-}
-.contact-btn:hover span:nth-child(1) {
-  left: 100%;
-  transition: 1s;
-}
-.contact-btn span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #2196f3);
-}
-.contact-btn:hover span:nth-child(3) {
-  right: 100%;
-  transition: 1s;
-  transition-delay: 0.5s;
-}
-.contact-btn span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #2196f3);
-}
-.contact-btn:hover span:nth-child(2) {
-  top: 100%;
-  transition: 1s;
-  transition-delay: 0.25s;
-}
-.contact-btn span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #2196f3);
-}
-.contact-btn:hover span:nth-child(4) {
-  bottom: 100%;
-  transition: 1s;
-  transition-delay: 0.75s;
-}
-/* ----------------------------------------------------------The sidebar menu------------------------------------------------ */
-#mySidenav a {
-  z-index: 1;
-  margin: 12.5% 0;
-  position: absolute;
-  /* Position them relative to the browser window */
-  left: -6.5%;
-  /* Position them outside of the screen */
-  transition: 0.3s;
-  /* Add transition on hover */
-  padding: 1%;
-  /* 15px padding */
-  width: 12%;
-  /* Set a specific width */
-  text-decoration: none;
-  /* Remove underline */
-  font-size: 20px;
-  /* Increase font size */
-  color: white;
-  /* White text color */
-  border-radius: 0 5px 5px 0;
-  /* Rounded corners on the top right and bottom right side */
-}
-#mySidenav a:hover {
-  left: 0;
-  /* On mouse-over, make the elements appear as they should */
-}
-/* The about link: 20px from the top with a green background */
-#home {
-  top: 20px;
-  background-color: #4caf50;
-}
-#about {
-  top: 100px;
-  background-color: #2196f3;
-  /* Blue */
-}
-#skills {
-  top: 180px;
-  background-color: #f44336;
-  /* Red */
-}
-#my-work {
-  top: 260px;
-  /* Light Black */
-  background-color: #555;
-}
-#contact {
-  top: 340px;
-  background-color: #17a2b8;
-}
-/*navbar icons*/
-.Home {
-  margin-left: 35%;
-}
-.User {
-  margin-left: 36%;
-}
-.Skills {
-  margin-left: 42%;
-}
-.Eye {
-  margin-left: 40%;
-}
-.Envelope {
-  margin-left: 26.5%;
-}
-/* ------------------------------------------------------------I Love animation ----------------------------------------------*/
+
 .love {
   color: #fff;
-  position: absolute;
-  bottom: 47%;
-  left: 57%;
+  margin: 0 auto;
   font-family: "Lexend Deca", sans-serif;
   font-weight: bold;
-  font-size: 500%;
+  font-size: 2.3rem;
   transition: 0.3s;
 }
 .animated-text {
   transition: 0.3s;
   color: #fff;
-  position: absolute;
-  bottom: 50%;
-  left: 75%;
-  background: #2980b9;
+  background: #00818a;
   transform: translate(-50, -50);
   padding: 0 40px;
   height: 60px;
+  width: 250px;
   font-family: "Lexend Deca", sans-serif;
   font-weight: bold;
   overflow: hidden;
+  margin: 0 auto;
 }
 .animation {
   text-align: center;
-  font-size: 40px;
+  font-size: 2rem;
   line-height: 60px;
 }
 .animation:first-child {
@@ -203,49 +128,114 @@ p {
   0% {
     margin-top: 0;
   }
-  12.5% {
+  8.33% {
     margin-top: -60px;
   }
-  25% {
+  16.66% {
     margin-top: -120px;
   }
-  37.5% {
+  24.99% {
     margin-top: -180px;
   }
-  50% {
+  33.32% {
     margin-top: -240px;
   }
-  62.5% {
+  41.65% {
+    margin-top: -300px;
+  }
+  49.99% {
+    margin-top: -360px;
+  }
+  58.31% {
+    margin-top: -300px;
+  }
+  66.64% {
+    margin-top: -240px;
+  }
+  74.97% {
     margin-top: -180px;
   }
-  75% {
+  83.33% {
     margin-top: -120px;
   }
-  87.5% {
+  91.63% {
     margin-top: -60px;
   }
   100% {
     margin-top: 0;
   }
 }
-/* .full-stop {
-  color: #fff;
-  position: absolute;
-  bottom: 47%;
-  left: 95%;
-  font-family: 'Lexend Deca', sans-serif;
-  font-weight: bold;
-  font-size: 5rem;
-} */
 
-/* ==========================================Social Icons====================================================== */
+/* contact */
+
+.button {
+  position: relative;
+  padding: 1em 1.5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  margin-top: 1em;
+  text-decoration: none !important;
+  letter-spacing: 1px;
+}
+.button:focus {
+  outline: none;
+}
+
+.button.type1 {
+  color: #4ecca3;
+  opacity: 0;
+  transition: all 1s ease;
+  display: inline-block;
+}
+
+.button.type1.type1::after,
+.button.type1.type1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+
+.button.type1.type1::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #4ecca3;
+  border-right-color: #4ecca3;
+}
+
+.button.type1.type1::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #4ecca3;
+  border-left-color: #4ecca3;
+}
+
+.button.type1.type1:hover:after,
+.button.type1.type1:hover:before {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+
 footer {
   position: relative;
   left: 0;
   bottom: 0;
   margin-top: 30px;
   width: 100%;
-  height: 150px;
+  height: 100px;
   color: white;
   text-align: center;
 }
@@ -257,6 +247,8 @@ footer {
   margin: 0%;
   padding: 0%;
   display: flex;
+  opacity: 0;
+  transition: all 1s ease;
 }
 .social li {
   list-style: none;
@@ -267,7 +259,7 @@ footer {
   position: relative;
   width: 50px;
   height: 50px;
-  margin: auto 30px;
+  margin: auto 15px;
   line-height: 50px;
   font-size: 30px;
   text-align: center;
@@ -339,188 +331,186 @@ footer {
   transition: transform 0.5s;
 }
 
-/* ==================================================================responsive=============================================== */
-/*=================================================== For Large Screen Devices =====================================*/
-@media screen and (max-width: 1400px) {
-  .animated-text {
-    transition: 0.3s;
-    left: 70%;
-    position: absolute;
-    width: 300px;
+/* Media */
+
+@media (min-width: 1024px) {
+  .main-container {
+    grid-template-areas:
+      "sidebar main-content"
+      "sidebar footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr auto;
   }
-  .love {
-    transition: 0.3s;
-    left: 50%;
-    position: absolute;
+
+  .sidebar {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
-  /* .Animation {
-    width: 700px;
-    margin-left: 15%;
-  } */
-}
-@media screen and (max-width: 1300px) {
-  #mySidenav {
-    transition: 0.5s;
-    visibility: hidden;
+
+  nav {
+    width: 100%;
   }
-  #navig {
-    visibility: visible;
-    transition: 0.5s;
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
   }
-  .animated-text {
-    transition: 0.3s;
-    left: 75%;
-    position: absolute;
-    width: 200px;
-    bottom: 52%;
+
+  nav li a {
+    font-size: 1.5rem;
   }
-  .love {
-    font-size: 350%;
-    transition: 0.3s;
-    left: 55%;
-    bottom: 51%;
+
+  .content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
-  .animation {
-    font-size: 25px;
-  }
-}
-/* ===============================================For Large to Medium Screen Devices ==========================================*/
-@media screen and (max-width: 930px) {
-  #mySidenav {
-    transition: 0.5s;
-    visibility: hidden;
-  }
-  #navig {
-    visibility: visible;
-    transition: 0.5s;
-  }
-  .Animation,
-  .animated-text,
-  .love {
-    margin-top: 45px;
-    position: relative;
-  }
-  .animated-text,
-  .love {
-    left: 0;
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-  .animation {
-    font-size: 25px;
-  }
-  .love {
-    font-size: 350%;
-  }
-  .animated-text {
-    position: absolute;
-    width: 200px;
-    left: 45%;
-    bottom: 15px;
-  }
-}
-/* ===========================================For Medium to Small Screen Devices============================================= */
-@media screen and (max-width: 576px) {
-  #mySidenav {
-    transition: 0.5s;
-    visibility: hidden;
-  }
-  #navig {
-    visibility: visible;
-    transition: 0.5s;
-  }
+
   .main {
-    margin-right: 15%;
+    text-align: left;
   }
-  h1 {
+
+  .main h1 {
     font-size: 3rem;
   }
-  p {
-    font-size: 1.1rem;
-  }
-  .contact-btn {
-    font-size: 25px;
-  }
-  .Animation,
-  .animated-text,
+
   .love {
-    margin-top: 45px;
-    position: relative;
+    font-size: 3rem;
   }
-  .animated-text,
-  .love {
-    left: 0;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .animation {
-    font-size: 20px;
-  }
-  .love {
-    font-size: 350%;
-  }
-  .animated-text {
-    position: absolute;
-    width: 200px;
-    left: 45%;
-    bottom: 10px;
+
+  footer {
+    height: 150px;
+    margin-top: 0;
   }
 }
-/* ===========================================For Small Screen Devices============================================= */
-@media screen and (max-width: 435px) {
-  #mySidenav {
-    transition: 0.5s;
-    visibility: hidden;
-  }
-  #navig {
-    visibility: visible;
-    transition: 0.5s;
-  }
-  .main {
-    margin-right: 15%;
-    text-align: center;
-  }
-  h1 {
-    margin-top: 80px;
-    font-size: 2.5rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  .contact-btn {
-    margin-top: 20px;
-    font-size: 15px;
-  }
-  .Animation {
-    margin-top: 70px;
-    text-align: center;
-  }
-  .Animation,
-  .animated-text,
-  .love {
-    position: relative;
-  }
-  .animated-text,
-  .love {
-    left: 0;
-  }
-  .animation {
-    font-size: 25px;
-  }
-  .love {
-    font-size: 350%;
-    text-align: center;
-  }
-  .animated-text {
-    margin: 25px auto;
-    left: 0;
-    top: -30px;
-    width: 270px;
-    height: 60px;
-    bottom: 0;
-  }
-  /* Social buttons */
+@media (min-width: 420px) {
   .social li a {
-    margin: auto 15px;
+    margin: auto 30px;
+  }
+}
+/* Main Title Animation */
+.title-anim {
+  opacity: 0;
+  transition: all 1s ease;
+  display: inline-block;
+}
+
+span.fade-in {
+  opacity: 1;
+}
+
+.contact-btn.fade-in {
+  opacity: 1;
+}
+
+.Animation.fade-in {
+  opacity: 1;
+}
+
+.social.fade-in {
+  opacity: 1;
+}
+
+.subtitle.fade-in {
+  opacity: 1;
+}
+
+/* Rubber band animation  */
+
+.rubberBand {
+  -moz-animation: rubberBand 0.8s;
+  -webkit-animation: rubberBand 0.8s;
+  animation: rubberBand 0.8s;
+}
+@-webkit-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-moz-keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
