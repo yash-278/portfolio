@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,19 +14,33 @@
     <link href="./dist/main.css" rel="stylesheet" />
   </head>
 
-  <body class="font-source scroll-smooth overflow-x-hidden bg-black">
+  <body class="font-source overflow-x-hidden bg-black">
     <!-- ! NAVBAR -->
     <div class="navigation relative h-12" id="navigation">
-      <div class="navbar fixed z-10 w-full mx-auto bg-black cursor-pointer">
-        <div class="flex">
-          <div class="initials font-source flex-none mx-3 my-auto text-gray-200">
+      <div class="navbar fixed z-10 w-full h-12 mx-auto bg-black">
+        <div class="md:justify-between md:mx-16 flex h-full mx-4">
+          <!-- LOGO -->
+          <div class="initials font-source flex-none my-auto font-bold text-gray-200">
             <span>YK</span>
           </div>
-
-          <div class="font-source flex-1 my-auto font-bold tracking-wide text-center text-gray-400">
+          <!-- SCROLLSPY -->
+          <div
+            class="md:hidden font-source flex-1 my-auto font-bold tracking-wide text-center text-gray-400"
+          >
             <span>HOME</span>
           </div>
-          <div class="nav-button flex-none mx-2 my-auto">
+          <!-- Desktop MEnu -->
+          <div
+            class="md:block font-source hidden my-auto font-bold tracking-wide text-center text-gray-400"
+          >
+            <a class="hover:text-gray-200 mx-2 transition" href="#">HOME</a>
+            <a class="hover:text-gray-200 mx-2 transition" href="#about">ABOUT</a>
+            <a class="hover:text-gray-200 mx-2 transition" href="#skills">SKILLS</a>
+            <a class="hover:text-gray-200 mx-2 transition" href="#projects">PROJECTS</a>
+            <a class="hover:text-gray-200 mx-2 transition" href="#contact">CONTACT ME</a>
+          </div>
+          <!-- Nav Button -->
+          <div class="mobile-menu-button nav-button md:hidden flex-none my-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="fill-white w-8 h-8 my-3 text-gray-200"
@@ -42,6 +56,46 @@
               />
             </svg>
           </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu translate-x-80 hidden text-gray-200 bg-gray-700">
+          <ul class="">
+            <li class="menu-list">
+              <a href="#" class="hover:bg-gray-500 block px-2 py-4 text-sm"> Home </a>
+            </li>
+            <li class="menu-list">
+              <a
+                href="#about"
+                class="hover:bg-gray-500 block px-2 py-4 text-sm transition duration-300"
+              >
+                About
+              </a>
+            </li>
+            <li class="menu-list">
+              <a
+                href="#skills"
+                class="hover:bg-gray-500 block px-2 py-4 text-sm transition duration-300"
+              >
+                Skills
+              </a>
+            </li>
+            <li class="menu-list">
+              <a
+                href="#projects"
+                class="hover:bg-gray-500 block px-2 py-4 text-sm transition duration-300"
+              >
+                Projects
+              </a>
+            </li>
+            <li class="menu-list">
+              <a
+                href="#contact"
+                class="hover:bg-gray-500 block px-2 py-4 text-sm transition duration-300"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -635,13 +689,15 @@
             </p>
           </div>
           <div class="main-animation md:justify-start flex justify-between my-6">
-            <button
+            <a
               class="md:mr-8 hover:bg-gray-300 outline outline-2 outline-gray-300 hover:text-black px-3 py-2 font-semibold text-white transition duration-300 ease-in-out rounded"
+              href="#contact"
             >
               CONTACT ME
-            </button>
-            <button
+            </a>
+            <a
               class="hover:text-gray-200 hover:scale-105 font-semibold text-gray-400 transition duration-300 ease-in-out"
+              href="#projects"
             >
               SEE MY WORK
               <svg
@@ -656,26 +712,32 @@
                   clip-rule="evenodd"
                 />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </div>
       <div class="main-animation mx-auto my-3 font-semibold">
-        <button
+        <a
           class="hover:text-gray-300 mx-2 font-semibold text-gray-400 transition duration-300 ease-in-out"
+          target="new-tab"
+          href="https://github.com/yash-278"
         >
           GITHUB
-        </button>
-        <button
+        </a>
+        <a
           class="hover:text-gray-300 mx-2 font-semibold text-gray-400 transition duration-300 ease-in-out"
+          href="https://www.instagram.com/yash__codes/"
+          target="new-tab"
         >
-          INSTA
-        </button>
-        <button
+          INSTAGRAM
+        </a>
+        <a
           class="hover:text-gray-300 mx-2 font-semibold text-gray-400 transition duration-300 ease-in-out"
+          href="https://twitter.com/yashkadam278"
+          target="new-tab"
         >
-          FEKBUK
-        </button>
+          TWITTER
+        </a>
       </div>
     </div>
 
@@ -701,7 +763,7 @@
     </div>
 
     <!-- ! ABOUT ME -->
-    <div class="h-custom bg-black">
+    <div id="about" class="scroll-mt-12 h-custom bg-black">
       <div
         class="about-container sm:flex-row-reverse flex flex-col w-full h-full overflow-x-hidden"
       >
@@ -734,9 +796,10 @@
     <!-- ! SKILLS SECTION -->
 
     <div
-      class="skills h-custom flex items-center justify-center overflow-x-hidden text-gray-200 bg-black"
+      id="skills"
+      class="skills scroll-mt-12 h-custom flex items-center justify-center text-gray-200 bg-black"
     >
-      <div class="mx-4">
+      <div class="mx-4 overflow-x-hidden">
         <h3 class="skill-title md:text-5xl md:w-full my-4 text-3xl font-semibold tracking-wider">
           MY SKILLS
         </h3>
@@ -759,7 +822,10 @@
 
     <!-- ! PROJECTS SECTION -->
 
-    <div class="projects xl:h-custom flex items-center py-3 text-gray-200 bg-black select-none">
+    <div
+      id="projects"
+      class="scroll-mt-12 projects xl:h-custom flex items-center py-3 text-gray-200 bg-black select-none"
+    >
       <div>
         <h3 class="md:text-5xl lg:w-full py-4 text-3xl font-semibold tracking-wider text-center">
           PROJECTS
@@ -960,103 +1026,105 @@
     </div>
 
     <!-- ! CONTACT SECTION  -->
-
-    <div
-      class="contact lg:h-custom lg:flex-row lg:justify-evenly flex flex-col items-center justify-center pb-6 overflow-x-hidden bg-black"
-    >
-      <form class="contact-form lg:w-1/2 w-full max-w-lg px-4">
-        <h3 class="md:text-5xl lg:w-full py-8 text-3xl font-semibold tracking-wider text-gray-200">
-          CONTACT ME
-        </h3>
-        <div class="flex flex-wrap mb-6 -mx-3">
-          <div class="md:w-1/2 md:mb-0 w-full px-3 mb-6">
-            <label
-              class="block mb-2 text-xs font-bold tracking-wide text-gray-300 uppercase"
-              for="grid-first-name"
-            >
-              First Name
-            </label>
-            <input
-              class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-700 bg-black border-b-2 appearance-none"
-              id="grid-first-name"
-              type="text"
-              placeholder="Jane"
-            />
-            <!-- <p class="text-xs italic text-red-500">Please fill out this field.</p> -->
+    <div id="contact" class="scroll-mt-12">
+      <div
+        class="contact lg:h-custom lg:flex-row lg:justify-evenly flex flex-col items-center justify-center pb-6 overflow-x-hidden bg-black"
+      >
+        <form class="scroll-mt-12 contact-form lg:w-1/2 w-full max-w-lg px-4">
+          <h3
+            class="md:text-5xl lg:w-full py-8 text-3xl font-semibold tracking-wider text-gray-200"
+          >
+            CONTACT ME
+          </h3>
+          <div class="flex flex-wrap mb-6 -mx-3">
+            <div class="md:w-1/2 md:mb-0 w-full px-3 mb-6">
+              <label
+                class="block mb-2 text-xs font-bold tracking-wide text-gray-300 uppercase"
+                for="grid-first-name"
+              >
+                First Name
+              </label>
+              <input
+                class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-700 bg-black border-b-2 appearance-none"
+                id="grid-first-name"
+                type="text"
+                placeholder="Jane"
+              />
+              <!-- <p class="text-xs italic text-red-500">Please fill out this field.</p> -->
+            </div>
+            <div class="md:w-1/2 w-full px-3">
+              <label
+                class="block mb-2 text-xs font-bold tracking-wide text-gray-300 uppercase"
+                for="grid-first-name"
+              >
+                Last Name
+              </label>
+              <input
+                class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-700 bg-black border-b-2 appearance-none"
+                id="grid-first-name"
+                type="text"
+                placeholder="Doe"
+              />
+            </div>
           </div>
-          <div class="md:w-1/2 w-full px-3">
-            <label
-              class="block mb-2 text-xs font-bold tracking-wide text-gray-300 uppercase"
-              for="grid-first-name"
-            >
-              Last Name
-            </label>
-            <input
-              class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-700 bg-black border-b-2 appearance-none"
-              id="grid-first-name"
-              type="text"
-              placeholder="Doe"
-            />
+          <div class="flex flex-wrap mb-6 -mx-3">
+            <div class="w-full px-3">
+              <label
+                class="block mb-2 text-xs font-bold tracking-wide text-gray-300 uppercase"
+                for="grid-password"
+              >
+                E-mail
+              </label>
+              <input
+                class="focus:outline-none focus:border-gray-500 block w-full py-3 mb-3 leading-tight text-gray-200 bg-black border-b-2 appearance-none"
+                id="email"
+                type="email"
+                placeholder="janedoe@example.com"
+              />
+              <!-- <p class="text-xs italic text-gray-600">Some tips - as long as needed</p> -->
+            </div>
           </div>
-        </div>
-        <div class="flex flex-wrap mb-6 -mx-3">
-          <div class="w-full px-3">
-            <label
-              class="block mb-2 text-xs font-bold tracking-wide text-gray-300 uppercase"
-              for="grid-password"
-            >
-              E-mail
-            </label>
-            <input
-              class="focus:outline-none focus:border-gray-500 block w-full py-3 mb-3 leading-tight text-gray-200 bg-black border-b-2 appearance-none"
-              id="email"
-              type="email"
-              placeholder="janedoe@example.com"
-            />
-            <!-- <p class="text-xs italic text-gray-600">Some tips - as long as needed</p> -->
-          </div>
-        </div>
-        <div class="flex flex-wrap mb-6 -mx-3">
-          <div class="w-full px-3">
-            <label
-              class="block mb-2 text-xs font-bold tracking-wide text-gray-300 uppercase"
-              for="grid-password"
-            >
-              Message
-            </label>
-            <textarea
-              class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-300 bg-black border-b-2 border-gray-200 rounded appearance-none resize-y"
-              id="message"
-              placeholder="Message"
-            ></textarea>
-            <!-- <p class="text-xs italic text-gray-600">
+          <div class="flex flex-wrap mb-6 -mx-3">
+            <div class="w-full px-3">
+              <label
+                class="block mb-2 text-xs font-bold tracking-wide text-gray-300 uppercase"
+                for="grid-password"
+              >
+                Message
+              </label>
+              <textarea
+                class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-300 bg-black border-b-2 border-gray-200 rounded appearance-none resize-y"
+                id="message"
+                placeholder="Message"
+              ></textarea>
+              <!-- <p class="text-xs italic text-gray-600">
               Re-size can be disabled by set by resize-none / resize-y / resize-x / resize
             </p> -->
+            </div>
           </div>
-        </div>
-        <div class="md:flex md:items-center">
-          <div class="md:w-1/3">
-            <button
-              class="hover:bg-teal-400 focus:shadow-outline focus:outline-none px-4 py-2 font-bold text-white bg-teal-400 rounded shadow"
-              type="button"
-            >
-              Send
-            </button>
+          <div class="md:flex md:items-center">
+            <div class="md:w-1/3">
+              <button
+                class="hover:bg-teal-400 focus:shadow-outline focus:outline-none px-4 py-2 font-bold text-white bg-teal-400 rounded shadow"
+                type="button"
+              >
+                Send
+              </button>
+            </div>
+            <div class="md:w-2/3"></div>
           </div>
-          <div class="md:w-2/3"></div>
+        </form>
+        <div class="contact-email lg:w-1/2 w-full max-w-lg px-4 text-gray-200">
+          <p class="md:text-lg my-6">
+            If you liked my work, write to me. We will choose the most convenient time and place. Do
+            not forget to bring a good mood.
+          </p>
+          <h5 class="md:text-lg my-2 font-semibold">MY EMAIL</h5>
+          <p class="md:text-lg mb-6">yashkadam278@gmail.com</p>
+          <h5 class="md:text-lg my-2 font-semibold">SOCIALS</h5>
         </div>
-      </form>
-      <div class="contact-email lg:w-1/2 w-full max-w-lg px-4 text-gray-200">
-        <p class="md:text-lg my-6">
-          If you liked my work, write to me. We will choose the most convenient time and place. Do
-          not forget to bring a good mood.
-        </p>
-        <h5 class="md:text-lg my-2 font-semibold">MY EMAIL</h5>
-        <p class="md:text-lg mb-6">yashkadam278@gmail.com</p>
-        <h5 class="md:text-lg my-2 font-semibold">SOCIALS</h5>
       </div>
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="

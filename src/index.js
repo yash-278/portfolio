@@ -1,12 +1,34 @@
+//  ! Mobile Navbar
+const btn = document.querySelector(".mobile-menu-button");
+const menu = document.querySelector(".mobile-menu");
+const menuBtn = document.querySelectorAll(".menu-list").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    gsap.to(".mobile-menu", { x: 300, opacity: 0, duration: 0.5, onComplete: toggleHidden });
+  });
+});
+
+const toggleHidden = () => {
+  menu.classList.add("hidden");
+};
+
+btn.addEventListener("click", () => {
+  if (menu.classList.contains("hidden")) {
+    gsap.to(".mobile-menu", { x: 0, opacity: 1, duration: 0.5 });
+    menu.classList.remove("hidden");
+  } else {
+    gsap.to(".mobile-menu", { x: 300, opacity: 0, duration: 0.5, onComplete: toggleHidden });
+  }
+});
+
 //  ! Initial Animation
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-tl.to(".anime-text", { y: "0%", duration: 1.5, stagger: 0.25 });
-tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
-tl.to(".intro", { y: "-100%", duration: 1 }, "-=1.5");
-tl.fromTo(".main-animation", { opacity: 0 }, { opacity: 1, duration: 1, stagger: 0.25 }, "-=1");
-tl.fromTo(".navigation", { opacity: 0 }, { opacity: 1, duration: 1 }, "-=1");
+tl.to(".anime-text", { y: "0%", /*duration: 1.5,*/ stagger: 0.25 });
+tl.to(".slider", { y: "-100%", /*duration: 1.5,*/ delay: 0.5 });
+tl.to(".intro", { y: "-100%" /*duration: 1 */ }, "-=1.5");
+tl.fromTo(".main-animation", { opacity: 0 }, { opacity: 1, /*duration: 1,*/ stagger: 0.25 }, "-=1");
+tl.fromTo(".navigation", { opacity: 0 }, { opacity: 1 /*duration: 1 */ }, "-=1");
 
 // ! Scroll Animation for About
 const scrollAboutTl = gsap.timeline({
@@ -17,8 +39,8 @@ const scrollAboutTl = gsap.timeline({
 });
 
 scrollAboutTl
-  .from(".about-img", { x: 300, opacity: 0, duration: 1 })
-  .from(".about-text", { x: -200, opacity: 0, duration: 1, stagger: 0.25 });
+  .from(".about-img", { x: 300, opacity: 0, duration: 0.5 })
+  .from(".about-text", { x: -200, opacity: 0, duration: 0.75, stagger: 0.25 });
 
 // ! Scroll Animation for Skills
 
