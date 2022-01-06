@@ -24,11 +24,11 @@ btn.addEventListener("click", () => {
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-tl.to(".anime-text", { y: "0%", /*duration: 1.5,*/ stagger: 0.25 });
-tl.to(".slider", { y: "-100%", /*duration: 1.5,*/ delay: 0.5 });
-tl.to(".intro", { y: "-100%" /*duration: 1 */ }, "-=1.5");
-tl.fromTo(".main-animation", { opacity: 0 }, { opacity: 1, /*duration: 1,*/ stagger: 0.25 }, "-=1");
-tl.fromTo(".navigation", { opacity: 0 }, { opacity: 1 /*duration: 1 */ }, "-=1");
+tl.to(".anime-text", { y: "0%", duration: 1.5, stagger: 0.25 });
+tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+tl.to(".intro", { y: "-100%" duration: 1  }, "-=1.5");
+tl.fromTo(".main-animation", { opacity: 0 }, { opacity: 1, duration: 1, stagger: 0.25 }, "-=1");
+tl.fromTo(".navigation", { opacity: 0 }, { opacity: 1 duration: 1  }, "-=1");
 
 // ! Scroll Animation for About
 const scrollAboutTl = gsap.timeline({
