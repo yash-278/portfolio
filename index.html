@@ -60,10 +60,10 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu translate-x-80 hidden text-gray-200 bg-gray-700">
           <ul class="">
-            <li class="menu-list">
+            <li class="menu-list border-b-2 border-gray-500">
               <a href="#" class="hover:bg-gray-500 block px-2 py-4 text-sm"> Home </a>
             </li>
-            <li class="menu-list">
+            <li class="menu-list border-b-2 border-gray-500">
               <a
                 href="#about"
                 class="hover:bg-gray-500 block px-2 py-4 text-sm transition duration-300"
@@ -71,7 +71,7 @@
                 About
               </a>
             </li>
-            <li class="menu-list">
+            <li class="menu-list border-b-2 border-gray-500">
               <a
                 href="#skills"
                 class="hover:bg-gray-500 block px-2 py-4 text-sm transition duration-300"
@@ -79,7 +79,7 @@
                 Skills
               </a>
             </li>
-            <li class="menu-list">
+            <li class="menu-list border-b-2 border-gray-500">
               <a
                 href="#projects"
                 class="hover:bg-gray-500 block px-2 py-4 text-sm transition duration-300"
@@ -87,7 +87,7 @@
                 Projects
               </a>
             </li>
-            <li class="menu-list">
+            <li class="menu-list border-b-2 border-gray-500">
               <a
                 href="#contact"
                 class="hover:bg-gray-500 block px-2 py-4 text-sm transition duration-300"
@@ -696,7 +696,7 @@
               CONTACT ME
             </a>
             <a
-              class="hover:text-gray-200 hover:scale-105 font-semibold text-gray-400 transition duration-300 ease-in-out"
+              class="hover:text-gray-200 hover:scale-105 flex items-center font-semibold text-gray-400 transition duration-300 ease-in-out"
               href="#projects"
             >
               SEE MY WORK
@@ -780,12 +780,12 @@
           <h3 class="about-text md:my-6 md:text-5xl my-4 text-3xl font-semibold tracking-wider">
             YASH KADAM
           </h3>
-          <p class="about-text md:text-xl md:mb-4">
+          <p class="about-text md:text-xl md:mb-4 text-base">
             Student, studying at University of Mumbai <br />
             for Masters in Computer Science.
           </p>
 
-          <p class="about-text md:text-xl">
+          <p class="about-text md:text-xl text-base">
             At the beginning of year I became interested in web development. I've completed JS
             courses and have knowledge of HTML and CSS. I also work with ReactJS.
           </p>
@@ -833,7 +833,7 @@
         <div class="md:grid-cols-2 md:mx-10 grid grid-cols-1 gap-4 mx-4">
           <!-- ?NekoMori -->
           <div
-            class="project-single group bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-blue-500 hover:to-violet-500 relative px-8 py-5 transition-colors rounded"
+            class="project-single bg-slate-800 hover:bg-slate-600 group relative px-8 py-6 transition-colors duration-200 rounded"
           >
             <h4
               class="group-hover:text-transparent text-3xl font-bold tracking-wide transition duration-300 ease-in-out"
@@ -843,8 +843,9 @@
             <p class="group-hover:text-transparent text-lg transition duration-300 ease-in-out">
               View anime airing schedules as well as yearly archives.
             </p>
-            <button
+            <a
               class="group-hover:inline-block custom-button hover:bg-slate-200 hover:text-gray-900 absolute hidden px-4 py-2 transition duration-300 ease-in-out border-2 border-solid rounded"
+              href="https://nekomori.herokuapp.com"
             >
               VISIT SITE
               <svg
@@ -859,12 +860,17 @@
                   clip-rule="evenodd"
                 />
               </svg>
-            </button>
+            </a>
+            <p
+              class="group-hover:text-transparent bottom-1 right-2 md:text-sm absolute text-xs text-gray-400 transition duration-300 ease-in-out"
+            >
+              React, NodeJS, TailwindCSS
+            </p>
           </div>
 
           <!--? CrownClothing -->
           <div
-            class="project-single group bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-cyan-500 hover:to-blue-500 relative px-8 py-5 transition-colors rounded"
+            class="project-single group bg-slate-800 hover:bg-slate-600 relative px-8 py-5 transition-colors duration-200 rounded"
           >
             <h4
               class="group-hover:text-transparent text-3xl font-bold tracking-wide transition duration-300 ease-in-out"
@@ -875,8 +881,9 @@
               Fashion Founded on Fit, Built on Service, and Focused on Style. However You Fit, Crown
               Clothing Fits You.
             </p>
-            <button
+            <a
               class="group-hover:inline-block custom-button hover:bg-slate-200 hover:text-gray-900 absolute hidden px-4 py-2 transition duration-300 ease-in-out border-2 border-solid rounded"
+              href="https://crwn-clothing-278.herokuapp.com/"
             >
               VISIT SITE
               <svg
@@ -891,12 +898,17 @@
                   clip-rule="evenodd"
                 />
               </svg>
-            </button>
+            </a>
+            <p
+              class="group-hover:text-transparent bottom-1 right-2 md:text-sm absolute text-xs text-gray-400 transition duration-300 ease-in-out"
+            >
+              React, NodeJS, MongoDB
+            </p>
           </div>
 
           <!--? India Travel Agency -->
           <div
-            class="project-single group bg-gradient-to-r from-purple-500 to-pink-500 hover:from-fuchsia-500 hover:to-rose-500 relative px-8 py-5 transition-colors rounded"
+            class="project-single group bg-slate-800 hover:bg-slate-600 relative px-8 py-5 transition-colors duration-200 rounded"
           >
             <h4
               class="group-hover:text-transparent text-3xl font-bold tracking-wide transition duration-300 ease-in-out"
@@ -907,8 +919,9 @@
               With a desire to travel, there is a breath-taking natural wonders for ultimate outdoor
               travelling adventure.
             </p>
-            <button
+            <a
               class="group-hover:inline-block custom-button hover:bg-slate-200 hover:text-gray-900 absolute hidden px-4 py-2 transition duration-300 ease-in-out border-2 border-solid rounded"
+              href="https://yash-278.github.io/tourist-site/"
             >
               VISIT SITE
               <svg
@@ -923,12 +936,17 @@
                   clip-rule="evenodd"
                 />
               </svg>
-            </button>
+            </a>
+            <p
+              class="group-hover:text-transparent bottom-1 right-2 md:text-sm absolute text-xs text-gray-400 transition duration-300 ease-in-out"
+            >
+              HTML, CSS, JavaScript
+            </p>
           </div>
 
           <!--? Lorem Ipsum  -->
           <div
-            class="project-single group bg-gradient-to-r from-lime-500 to-emerald-500 hover:from-green-500 hover:to-teal-500 relative px-8 py-5 transition-colors rounded"
+            class="project-single group bg-slate-800 hover:bg-slate-600 relative px-8 py-5 transition-colors duration-200 rounded"
           >
             <h4
               class="group-hover:text-transparent text-3xl font-bold tracking-wide transition duration-300 ease-in-out"
@@ -956,11 +974,16 @@
                 />
               </svg>
             </button>
+            <p
+              class="group-hover:text-transparent bottom-1 right-2 md:text-sm absolute text-xs text-gray-400 transition duration-300 ease-in-out"
+            >
+              React, NodeJS, TailwindCSS
+            </p>
           </div>
 
           <!--? Lorem Ipsum  -->
           <div
-            class="project-single group bg-gradient-to-r from-lime-500 to-emerald-500 hover:from-green-500 hover:to-teal-500 relative px-8 py-5 transition-colors rounded"
+            class="project-single group bg-slate-800 hover:bg-slate-600 relative px-8 py-5 transition-colors duration-200 rounded"
           >
             <h4
               class="group-hover:text-transparent text-3xl font-bold tracking-wide transition duration-300 ease-in-out"
@@ -988,11 +1011,16 @@
                 />
               </svg>
             </button>
+            <p
+              class="group-hover:text-transparent bottom-1 right-2 md:text-sm absolute text-xs text-gray-400 transition duration-300 ease-in-out"
+            >
+              React, NodeJS, TailwindCSS
+            </p>
           </div>
 
           <!--? Lorem Ipsum  -->
           <div
-            class="project-single group bg-gradient-to-r from-lime-500 to-emerald-500 hover:from-green-500 hover:to-teal-500 relative px-8 py-5 transition-colors rounded"
+            class="project-single group bg-slate-800 hover:bg-slate-600 relative px-8 py-5 transition-colors duration-200 rounded"
           >
             <h4
               class="group-hover:text-transparent text-3xl font-bold tracking-wide transition duration-300 ease-in-out"
@@ -1020,6 +1048,11 @@
                 />
               </svg>
             </button>
+            <p
+              class="group-hover:text-transparent bottom-1 right-2 md:text-sm absolute text-xs text-gray-400 transition duration-300 ease-in-out"
+            >
+              React, NodeJS, TailwindCSS
+            </p>
           </div>
         </div>
       </div>
@@ -1030,7 +1063,12 @@
       <div
         class="contact lg:h-custom lg:flex-row lg:justify-evenly flex flex-col items-center justify-center pb-6 overflow-x-hidden bg-black"
       >
-        <form class="scroll-mt-12 contact-form lg:w-1/2 w-full max-w-lg px-4">
+        <form
+          class="scroll-mt-12 contact-form lg:w-1/2 w-full max-w-lg px-4"
+          action="mailto:info@w3docs.com"
+          method="get"
+          enctype="text/plain"
+        >
           <h3
             class="md:text-5xl lg:w-full py-8 text-3xl font-semibold tracking-wider text-gray-200"
           >
@@ -1048,6 +1086,7 @@
                 class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-700 bg-black border-b-2 appearance-none"
                 id="grid-first-name"
                 type="text"
+                name="First Name"
                 placeholder="Jane"
               />
               <!-- <p class="text-xs italic text-red-500">Please fill out this field.</p> -->
@@ -1062,6 +1101,7 @@
               <input
                 class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-700 bg-black border-b-2 appearance-none"
                 id="grid-first-name"
+                name="Last Name"
                 type="text"
                 placeholder="Doe"
               />
@@ -1078,6 +1118,7 @@
               <input
                 class="focus:outline-none focus:border-gray-500 block w-full py-3 mb-3 leading-tight text-gray-200 bg-black border-b-2 appearance-none"
                 id="email"
+                name="E-mail"
                 type="email"
                 placeholder="janedoe@example.com"
               />
@@ -1095,6 +1136,7 @@
               <textarea
                 class="focus:outline-none block w-full py-3 mb-3 leading-tight text-gray-300 bg-black border-b-2 border-gray-200 rounded appearance-none resize-y"
                 id="message"
+                name="Message"
                 placeholder="Message"
               ></textarea>
               <!-- <p class="text-xs italic text-gray-600">
@@ -1106,9 +1148,9 @@
             <div class="md:w-1/3">
               <button
                 class="hover:bg-teal-400 focus:shadow-outline focus:outline-none px-4 py-2 font-bold text-white bg-teal-400 rounded shadow"
-                type="button"
+                type="submit"
               >
-                Send
+                SEND
               </button>
             </div>
             <div class="md:w-2/3"></div>
