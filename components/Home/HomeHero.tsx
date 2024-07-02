@@ -15,7 +15,7 @@ export function HomeHero() {
           Self-taught programmer motivated by passion and personal projects.
           <br />
           Expert of searching bugs on Google and quickly scanning the best
-          StackOverflow answers
+          StackOverflow answers.
         </p>
       </div>
     </BackgroundGradientAnimation>
