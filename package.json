@@ -8,6 +8,6 @@
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./dist/main.css --watch"
   },
   "dependencies": {
-    "stylelint-config-recommended": "^6.0.0"
+    "stylelint-config-recommended": "^13.0.0"
   }
 }
