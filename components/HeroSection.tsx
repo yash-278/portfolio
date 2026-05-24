@@ -1,4 +1,5 @@
 // Server Component — no 'use client'
+import Image from 'next/image'
 import SectionReveal from '@/components/SectionReveal'
 
 export default function HeroSection() {
@@ -57,12 +58,13 @@ export default function HeroSection() {
         {/* Photo column */}
         <SectionReveal animate="mount" delay={0.3}>
           <div className="mx-auto flex-shrink-0">
-            {/* TODO: swap with real photo at public/yash.jpg */}
-            <div
-              className="rounded-2xl ring-1 ring-border bg-surface"
-              style={{ width: 320, height: 320 }}
-              aria-label="Yash Kadam"
-              role="img"
+            <Image
+              src="/yash.jpg"
+              alt="Yash Kadam"
+              width={320}
+              height={320}
+              className="rounded-2xl ring-1 ring-border object-cover"
+              priority
             />
           </div>
         </SectionReveal>
