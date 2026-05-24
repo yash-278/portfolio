@@ -1,36 +1,33 @@
 import Link from 'next/link'
 
+// TODO Phase 2: add usePathname() for active link accent + border-b-2 border-accent
 export default function Navbar() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 h-14 border-b border-border bg-bg/80 backdrop-blur-sm">
+    <header className="fixed left-0 right-0 top-0 z-40 h-14 border-b border-border bg-surface backdrop-blur-sm">
       <nav
         className="mx-auto flex h-full max-w-5xl items-center justify-between px-6"
         aria-label="Main navigation"
       >
         <Link
           href="/"
-          className="font-mono text-sm font-semibold tracking-tight text-text transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+          className="text-sm font-semibold text-text transition-colors duration-150 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Yash Kadam
         </Link>
-        <ul className="flex items-center gap-6" role="list">
-          <li>
-            <Link
-              href="/"
-              className="text-sm text-text-muted transition-colors hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/blog"
-              className="text-sm text-text-muted transition-colors hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
-            >
-              Blog
-            </Link>
-          </li>
-        </ul>
+        <div className="flex items-center gap-6">
+          <Link
+            href="/"
+            className="text-sm font-semibold text-text transition-colors duration-150 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            Home
+          </Link>
+          <Link
+            href="/blog"
+            className="text-sm font-semibold text-text transition-colors duration-150 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            Blog
+          </Link>
+        </div>
       </nav>
     </header>
   )
