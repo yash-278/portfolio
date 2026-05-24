@@ -35,7 +35,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md — Package legitimacy gate + branch + scaffold + dependency install
 - [x] 01-02-PLAN.md — Config layer: next.config.mjs (MDX), tailwind.config.ts, globals.css, lib/utils.ts, mdx-components.tsx
-- [ ] 01-03-PLAN.md — Root layout shell: FOUC script, LazyMotion, Navbar, Footer
+- [x] 01-03-PLAN.md — Root layout shell: FOUC script, LazyMotion, Navbar, Footer
 - [ ] 01-04-PLAN.md — MDX smoke test + Vercel env var + Phase 1 success criteria verification
 **UI hint**: yes
 
