@@ -2,19 +2,19 @@
 // Root layout: fonts, FOUC script, LazyMotion wrapper, Navbar, Footer
 // NOTE: Do NOT add 'use client' here — root layout must remain a Server Component.
 import type { Metadata } from 'next'
-import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Geist, Geist_Mono } from 'next/font/google'
 import { LazyMotion, domAnimation } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import './globals.css'
 
-const inter = Inter({
+const geist = Geist({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
 })
 
-const jetbrainsMono = JetBrains_Mono({
+const geistMono = Geist_Mono({
   subsets: ['latin'],
   weight: ['400', '600'],
   variable: '--font-mono',
@@ -22,8 +22,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Yash Kadam',
-  description: 'Technical Lead and fullstack developer',
+  title: 'Yash Kadam — Technical Lead',
+  description: 'Technical Lead and fullstack developer. I write code, lead teams, and ship things.',
 }
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <head>
         {/* FOUC prevention: must be first child of <head>, before any stylesheet — no defer/async */}
         {/* Content is a static string constant — no user input, no XSS risk */}
