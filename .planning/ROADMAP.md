@@ -31,7 +31,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `mdx-components.tsx` exists at the project root and a test `.mdx` file renders as HTML — not raw markdown text.
   4. Framer Motion is imported only via `LazyMotion` + `domAnimation`; no `motion.*` import appears outside a leaf Client Component file.
   5. The Navbar and Footer are visible and structurally correct on every page route, and `NEXT_PUBLIC_SITE_URL` is set in Vercel env vars.
-**Plans**: TBD
+**Plans**: 4 plans
+Plans:
+- [ ] 01-01-PLAN.md — Package legitimacy gate + branch + scaffold + dependency install
+- [ ] 01-02-PLAN.md — Config layer: next.config.mjs (MDX), tailwind.config.ts, globals.css, lib/utils.ts, mdx-components.tsx
+- [ ] 01-03-PLAN.md — Root layout shell: FOUC script, LazyMotion, Navbar, Footer
+- [ ] 01-04-PLAN.md — MDX smoke test + Vercel env var + Phase 1 success criteria verification
 **UI hint**: yes
 
 ### Phase 2: Portfolio Page
@@ -92,7 +97,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/? | Not started | - |
+| 1. Foundation | 0/4 | Not started | - |
 | 2. Portfolio Page | 0/? | Not started | - |
 | 3. Blog Infrastructure | 0/? | Not started | - |
 | 4. SEO & Deployment | 0/? | Not started | - |
