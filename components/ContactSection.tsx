@@ -9,16 +9,14 @@ export default function ContactSection() {
     >
       <div className="mx-auto max-w-5xl px-6">
         <SectionReveal>
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-            Contact
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">Contact</p>
           <h2 id="contact-heading" className="mt-2 text-3xl font-semibold text-text">
             Get in touch
           </h2>
         </SectionReveal>
 
         <SectionReveal delay={0.1}>
-          <div className="mt-10 rounded-2xl border border-border/60 bg-surface/60 p-8 md:p-10">
+          <div className="mt-10 rounded-2xl bg-surface/70 p-8 md:p-10">
             <p className="max-w-lg text-base leading-relaxed text-text-muted">
               Whether you&apos;re looking to collaborate, hire, or just want to
               talk about something interesting — my inbox is open.
@@ -31,8 +29,8 @@ export default function ContactSection() {
               Say hello →
             </a>
 
-            <div className="mt-8 flex items-center gap-1 border-t border-border/40 pt-6">
-              <span className="text-xs text-text-muted mr-3">Also on</span>
+            <div className="mt-8 flex items-center gap-1 pt-6">
+              <span className="mr-3 text-xs text-text-muted">Also on</span>
               <div className="flex gap-1">
                 <a
                   href="https://github.com/yash-278"

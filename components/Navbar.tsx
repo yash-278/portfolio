@@ -8,7 +8,7 @@ export default function Navbar() {
   const pathname = usePathname()
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-40 h-14 border-b border-border bg-surface backdrop-blur-sm">
+    <header className="fixed left-0 right-0 top-0 z-40 h-14 bg-surface/80 backdrop-blur-md">
       <nav
         className="mx-auto flex h-full max-w-5xl items-center justify-between px-6"
         aria-label="Main navigation"

@@ -26,23 +26,18 @@ export default function ProjectsSection() {
     >
       <div className="mx-auto max-w-5xl px-6">
         <SectionReveal>
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-            Projects
-          </p>
-          <h2
-            id="projects-heading"
-            className="mt-2 text-3xl font-semibold text-text"
-          >
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">Projects</p>
+          <h2 id="projects-heading" className="mt-2 text-3xl font-semibold text-text">
             Things I&apos;ve built
           </h2>
         </SectionReveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
           {projects.map((project, index) => (
             <SectionReveal key={project.name} delay={index * 0.1}>
-              <article className="group flex h-full flex-col rounded-2xl border border-border/60 bg-bg p-6 transition-all duration-200 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5">
+              <article className="group flex h-full flex-col rounded-2xl bg-bg p-6 transition-shadow duration-200 hover:shadow-xl hover:shadow-black/30">
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-xl font-semibold text-text group-hover:text-accent transition-colors duration-150">
+                  <h3 className="text-xl font-semibold text-text transition-colors duration-150 group-hover:text-accent">
                     {project.name}
                   </h3>
                   <a
@@ -60,8 +55,8 @@ export default function ProjectsSection() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      width={18}
-                      height={18}
+                      width={17}
+                      height={17}
                       aria-hidden="true"
                     >
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -79,7 +74,7 @@ export default function ProjectsSection() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md border border-accent/20 bg-accent/5 px-2.5 py-1 font-mono text-xs text-accent"
+                      className="rounded-md bg-accent/10 px-2.5 py-1 font-mono text-xs text-accent"
                     >
                       {tag}
                     </span>
