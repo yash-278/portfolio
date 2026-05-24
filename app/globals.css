@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Source: UI-SPEC 01-UI-SPEC.md (approved 2026-05-24) */
+/* Dark-only tokens for Phase 1. Light mode CSS vars ship with toggle in Phase 5 (PLSH-01). */
+:root {
+  --color-bg: #0a0a0a;
+  --color-surface: #111111;
+  --color-text: #e4e4e7;
+  --color-text-muted: #71717a;
+  --color-border: #27272a;
+  --color-accent: #22d3ee;
+  --color-accent-hover: #06b6d4;
+  --color-destructive: #ef4444;
+}
