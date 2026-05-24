@@ -50,7 +50,12 @@ Plans:
   3. Sharing yashkadam.com on LinkedIn or Twitter/X renders a correctly sized OG image with a title and description (not a blank or broken card).
   4. The page has no typewriter animation, no animated skill progress bars, and no older demo projects (Twitter clone, Crown Clothing, etc.).
   5. `next build` shows the `/` route as statically generated (SSG) with no client-side data fetching warnings.
-**Plans**: TBD
+**Plans**: 4 plans
+Plans:
+- [ ] 02-01-PLAN.md — Font swap (Geist), accent color (#818cf8), Navbar active-link state, Footer LinkedIn fix, blog stub
+- [ ] 02-02-PLAN.md — SectionReveal component + HeroSection + AboutSection (first vertical slice)
+- [ ] 02-03-PLAN.md — WorkSection + ProjectsSection + ContactSection (complete five-section portfolio)
+- [ ] 02-04-PLAN.md — Full metadata/OG image + next build SSG verification + human sign-off
 **UI hint**: yes
 
 ### Phase 3: Blog Infrastructure
@@ -98,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/4 | Not started | - |
-| 2. Portfolio Page | 0/? | Not started | - |
+| 2. Portfolio Page | 0/4 | Not started | - |
 | 3. Blog Infrastructure | 0/? | Not started | - |
 | 4. SEO & Deployment | 0/? | Not started | - |
 | 5. Polish & Analytics | 0/? | Not started | - |
