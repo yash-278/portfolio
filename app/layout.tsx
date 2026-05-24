@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
         {/* FOUC prevention: must be first child of <head>, before any stylesheet — no defer/async */}
         {/* Content is a static string constant — no user input, no XSS risk */}
