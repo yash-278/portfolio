@@ -12,7 +12,12 @@ A first-time visitor (developer, potential client, or collaborator) should leave
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Next.js 16.2.6 + TypeScript + Tailwind v3 scaffold on Vercel (FOUND-01) — Validated in Phase 1: Foundation
+- [x] Dark mode FOUC prevented via inline blocking script in root layout (FOUND-02) — Validated in Phase 1: Foundation
+- [x] Framer Motion LazyMotion + domAnimation pattern from project start (FOUND-03) — Validated in Phase 1: Foundation
+- [x] MDX pipeline configured via @next/mdx; rehype-pretty-code deferred to Phase 3 (FOUND-04) — Validated in Phase 1: Foundation
+- [x] Shared Navbar and Footer visible on all pages (FOUND-05) — Validated in Phase 1: Foundation
+- [x] NEXT_PUBLIC_SITE_URL=https://yashkadam.com set in Vercel env vars (FOUND-06) — Validated in Phase 1: Foundation
 
 ### Active
 
@@ -82,5 +87,9 @@ This document evolves at phase transitions and milestone boundaries.
 3. Audit Out of Scope — reasons still valid?
 4. Update Context with current state
 
+## Current State
+
+Phase 1 complete — Next.js 16.2.6 scaffold running on Vercel with Tailwind v3, MDX pipeline, dark-mode FOUC prevention, LazyMotion, Navbar, and Footer. Build exits 0. /blog/test-post statically generated as proof-of-concept.
+
 ---
-*Last updated: 2026-05-24 after initialization*
+*Last updated: 2026-05-24 after Phase 1: Foundation*
