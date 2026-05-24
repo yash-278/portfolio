@@ -1,5 +1,18 @@
-// Home page — Phase 1 infrastructure placeholder.
-// Portfolio sections (Hero, About, Work History, Projects, Contact) ship in Phase 2.
+import type { Metadata } from 'next'
+import HeroSection from '@/components/HeroSection'
+import AboutSection from '@/components/AboutSection'
+
+export const metadata: Metadata = {
+  title: 'Yash Kadam — Technical Lead',
+  description:
+    'Technical Lead and fullstack developer. I write code, lead teams, and ship things.',
+}
+
 export default function Home() {
-  return <div className="min-h-screen" />
+  return (
+    <>
+      <HeroSection />
+      <AboutSection />
+    </>
+  )
 }
