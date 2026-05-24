@@ -27,7 +27,7 @@ export default function HeroSection() {
         {/* Text column */}
         <div className="flex flex-col md:flex-1">
           <SectionReveal animate="mount" delay={0}>
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               Available for consulting
             </span>

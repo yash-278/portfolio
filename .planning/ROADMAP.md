@@ -52,10 +52,10 @@ Plans:
   5. `next build` shows the `/` route as statically generated (SSG) with no client-side data fetching warnings.
 **Plans**: 4 plans
 Plans:
-- [ ] 02-01-PLAN.md — Font swap (Geist), accent color (#818cf8), Navbar active-link state, Footer LinkedIn fix, blog stub
-- [ ] 02-02-PLAN.md — SectionReveal component + HeroSection + AboutSection (first vertical slice)
-- [ ] 02-03-PLAN.md — WorkSection + ProjectsSection + ContactSection (complete five-section portfolio)
-- [ ] 02-04-PLAN.md — Full metadata/OG image + next build SSG verification + human sign-off
+- [x] 02-01-PLAN.md — Font swap (Geist), accent color (#818cf8), Navbar active-link state, Footer LinkedIn fix, blog stub
+- [x] 02-02-PLAN.md — SectionReveal component + HeroSection + AboutSection (first vertical slice)
+- [x] 02-03-PLAN.md — WorkSection + ProjectsSection + ContactSection (complete five-section portfolio)
+- [x] 02-04-PLAN.md — Full metadata/OG image + next build SSG verification + human sign-off
 **UI hint**: yes
 
 ### Phase 3: Blog Infrastructure

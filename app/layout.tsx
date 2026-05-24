@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable}`} suppressHydrationWarning>
-      <head>
+      <head suppressHydrationWarning>
         {/* FOUC prevention: must be first child of <head>, before any stylesheet — no defer/async */}
         {/* Content is a static string constant — no user input, no XSS risk */}
         <script

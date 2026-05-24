@@ -16,7 +16,7 @@ export default function ContactSection() {
         </SectionReveal>
 
         <SectionReveal delay={0.1}>
-          <div className="mt-10 rounded-2xl bg-surface/70 p-8 md:p-10">
+          <div className="mt-10 rounded-2xl bg-surface/70 ring-1 ring-white/5 p-8 md:p-10">
             <p className="max-w-lg text-base leading-relaxed text-text-muted">
               Whether you&apos;re looking to collaborate, hire, or just want to
               talk about something interesting — my inbox is open.

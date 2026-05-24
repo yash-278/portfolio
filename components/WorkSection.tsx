@@ -9,24 +9,24 @@ export default function WorkSection() {
     >
       <div className="mx-auto max-w-5xl px-6">
         <SectionReveal>
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent">Experience</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">Now</p>
           <h2 id="work-heading" className="mt-2 text-3xl font-semibold text-text">
-            Where I&apos;ve worked
+            What I&apos;m doing
           </h2>
         </SectionReveal>
 
         <SectionReveal delay={0.1}>
-          <div className="mt-10 rounded-2xl bg-surface/70 p-6 md:p-8">
-            <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between">
-              <div>
-                <p className="text-lg font-semibold text-text">Technical Lead</p>
-                <p className="mt-0.5 text-base text-accent">KingsleyGate</p>
-              </div>
-              <span className="mt-1 shrink-0 rounded-md bg-bg px-3 py-1 font-mono text-xs text-text-muted md:mt-0">
-                2022 — Present
+          <div className="mt-10">
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <p className="text-lg font-semibold text-text">Technical Lead</p>
+              <span className="text-text-muted" aria-hidden="true">·</span>
+              <p className="text-base text-accent">KingsleyGate</p>
+              <span className="inline-flex items-center gap-1.5 font-mono text-xs text-text-muted md:ml-auto">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+                Since 2022
               </span>
             </div>
-            <p className="mt-4 text-base leading-relaxed text-text-muted">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-muted">
               Lead architecture and delivery of fullstack products across the
               entire stack — React frontends, Node.js APIs, and the deployment
               pipelines that keep everything running in production.
@@ -35,7 +35,7 @@ export default function WorkSection() {
               {['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Docker'].map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-md bg-bg px-2.5 py-1 font-mono text-xs text-text-muted"
+                  className="rounded-md bg-surface px-2.5 py-1 font-mono text-xs text-text-muted"
                 >
                   {tag}
                 </span>

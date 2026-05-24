@@ -32,12 +32,12 @@ export default function ProjectsSection() {
           </h2>
         </SectionReveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="mt-10 space-y-10">
           {projects.map((project, index) => (
             <SectionReveal key={project.name} delay={index * 0.1}>
-              <article className="group flex h-full flex-col rounded-2xl bg-bg p-6 transition-shadow duration-200 hover:shadow-xl hover:shadow-black/30">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-xl font-semibold text-text transition-colors duration-150 group-hover:text-accent">
+              <article className="group">
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3 className="text-lg font-semibold text-text transition-colors duration-150 group-hover:text-accent">
                     {project.name}
                   </h3>
                   <a
@@ -45,36 +45,19 @@ export default function ProjectsSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`View ${project.name} on GitHub`}
-                    className="shrink-0 text-text-muted transition-colors duration-150 hover:text-accent"
+                    className="shrink-0 font-mono text-xs text-text-muted transition-colors duration-150 hover:text-accent"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      width={17}
-                      height={17}
-                      aria-hidden="true"
-                    >
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
+                    GitHub →
                   </a>
                 </div>
-
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-text-muted">
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-muted">
                   {project.description}
                 </p>
-
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md bg-accent/10 px-2.5 py-1 font-mono text-xs text-accent"
+                      className="rounded-md bg-surface px-2.5 py-1 font-mono text-xs text-text-muted"
                     >
                       {tag}
                     </span>
