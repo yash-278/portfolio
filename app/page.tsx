@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import HeroSection from '@/components/HeroSection'
 import AboutSection from '@/components/AboutSection'
+import WorkSection from '@/components/WorkSection'
+import ProjectsSection from '@/components/ProjectsSection'
+import ContactSection from '@/components/ContactSection'
 
 export const metadata: Metadata = {
   title: 'Yash Kadam — Technical Lead',
@@ -13,6 +16,9 @@ export default function Home() {
     <>
       <HeroSection />
       <AboutSection />
+      <WorkSection />
+      <ProjectsSection />
+      <ContactSection />
     </>
   )
 }
