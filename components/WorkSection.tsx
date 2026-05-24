@@ -8,30 +8,43 @@ export default function WorkSection() {
       className="py-24 scroll-mt-14"
     >
       <div className="mx-auto max-w-5xl px-6">
-        <h2 id="work-heading" className="text-2xl font-semibold text-text">
-          Work
-        </h2>
-        <div className="mt-2 mb-10 h-0.5 w-8 bg-accent" />
-        <div className="border-l-2 border-accent/30 pl-6">
-          <div className="flex flex-col gap-8">
-            <SectionReveal delay={0}>
+        <SectionReveal>
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+            Experience
+          </p>
+          <h2 id="work-heading" className="mt-2 text-3xl font-semibold text-text">
+            Where I&apos;ve worked
+          </h2>
+        </SectionReveal>
+
+        <SectionReveal delay={0.1}>
+          <div className="mt-10 rounded-2xl border border-border/60 bg-surface/60 p-6 md:p-8">
+            <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between">
               <div>
-                <p className="text-base font-semibold text-text">
-                  Technical Lead
-                </p>
-                <p className="text-sm text-text-muted">
-                  <span className="text-accent">KingsleyGate</span>
-                  {' · '}
-                  <span>2022 — Current</span>
-                </p>
-                <p className="mt-1 text-base text-text">
-                  Ship production features across the full stack as the tech
-                  lead.
-                </p>
+                <p className="text-lg font-semibold text-text">Technical Lead</p>
+                <p className="mt-0.5 text-base text-accent">KingsleyGate</p>
               </div>
-            </SectionReveal>
+              <span className="mt-1 shrink-0 rounded-md border border-border/60 bg-bg px-3 py-1 font-mono text-xs text-text-muted md:mt-0">
+                2022 — Present
+              </span>
+            </div>
+            <p className="mt-4 text-base leading-relaxed text-text-muted">
+              Lead architecture and delivery of fullstack products across the
+              entire stack — React frontends, Node.js APIs, and the deployment
+              pipelines that keep everything running in production.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Docker'].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-md border border-border/60 bg-bg px-2.5 py-1 font-mono text-xs text-text-muted"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        </SectionReveal>
       </div>
     </section>
   )
