@@ -67,7 +67,10 @@ Plans:
   1. The blog index at `/blog` lists at least one real post with title, date, description, and reading time, sorted newest first.
   2. Navigating to a post page (`/blog/[slug]`) renders the MDX content with readable prose typography and syntax-highlighted code blocks — YAML frontmatter is not visible as raw text in the output.
   3. `getAllPosts()` called from a Node script returns a correctly typed array with `slug`, `title`, `date`, `description`, `tags`, and `readingTime` fields for every `.mdx` file in `content/blog/`.
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Config + data layer: rehype-pretty-code, typography plugin, lib/posts.ts, blog sub-layout, test-post fix
+- [ ] 03-02-PLAN.md — Blog index + post detail + Nekomori seed post (complete vertical slice)
 **UI hint**: yes
 
 ### Phase 4: SEO & Deployment
@@ -104,6 +107,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/4 | Not started | - |
 | 2. Portfolio Page | 0/4 | Not started | - |
-| 3. Blog Infrastructure | 0/? | Not started | - |
+| 3. Blog Infrastructure | 0/2 | Not started | - |
 | 4. SEO & Deployment | 0/? | Not started | - |
 | 5. Polish & Analytics | 0/? | Not started | - |
