@@ -112,6 +112,19 @@ None — all configuration files are complete and functional. The `mdx-component
 
 None — this plan modifies only configuration files. No new network endpoints, auth paths, file access patterns, or schema changes introduced. The `theme: 'github-dark-dimmed'` in `rehype-pretty-code` is a static string with no user input (T-02-01: accepted).
 
+## Self-Check: PASSED
+
+All files verified to exist and all commits verified in git history:
+- `next.config.mjs` — FOUND
+- `app/globals.css` — FOUND
+- `tailwind.config.ts` — FOUND
+- `lib/utils.ts` — FOUND
+- `mdx-components.tsx` — FOUND
+- `tsconfig.json` — FOUND
+- `.planning/phases/01-foundation/01-02-SUMMARY.md` — FOUND
+- Commit `684da61` (Task 1) — FOUND
+- Commit `6e2adf5` (Task 2) — FOUND
+
 ## Next Phase Readiness
 
 - Plan 01-03 can now use all design tokens (`bg-bg`, `text-text`, `text-text-muted`, `bg-surface`, `border-border`, `text-accent`) in Tailwind utility classes
