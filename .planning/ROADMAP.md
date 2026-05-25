@@ -103,7 +103,7 @@ Plans:
 **Plans**: 2 plans
 Plans:
 - [x] 05-01-PLAN.md — Analytics + SpeedInsights wired into layout, brew-index dead link removed
-- [ ] 05-02-PLAN.md — Animation audit, Lighthouse CWV run, Vercel dashboard activation checkpoint
+- [x] 05-02-PLAN.md — Animation audit, Lighthouse CWV run, Vercel dashboard activation checkpoint
 
 ## Progress
 
@@ -112,8 +112,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/4 | Not started | - |
-| 2. Portfolio Page | 0/4 | Not started | - |
-| 3. Blog Infrastructure | 0/2 | Not started | - |
-| 4. SEO & Deployment | 0/? | Not started | - |
-| 5. Polish & Analytics | 0/2 | Not started | - |
+| 1. Foundation | 4/4 | Complete | 2026-05-24 |
+| 2. Portfolio Page | 4/4 | Complete | 2026-05-24 |
+| 3. Blog Infrastructure | 2/2 | Complete | 2026-05-24 |
+| 4. SEO & Deployment | 3/3 | Complete | 2026-05-24 |
+| 5. Polish & Analytics | 2/2 | Complete | 2026-05-25 |
