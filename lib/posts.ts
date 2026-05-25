@@ -15,6 +15,7 @@ export interface PostMeta {
 }
 
 export function getAllPosts(): PostMeta[] {
+  if (!fs.existsSync(BLOG_DIR)) return []
   const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith('.mdx'))
 
   return files
