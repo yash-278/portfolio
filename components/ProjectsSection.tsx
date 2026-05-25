@@ -1,6 +1,13 @@
 import SectionReveal from '@/components/SectionReveal'
 
-const projects = [
+interface Project {
+  name: string
+  description: string
+  tags: string[]
+  github?: string
+}
+
+const projects: Project[] = [
   {
     name: 'Nekomori',
     description:
@@ -13,7 +20,6 @@ const projects = [
     description:
       'A fast, searchable frontend for the Homebrew package registry. Find and explore macOS packages without touching the terminal.',
     tags: ['React', 'TypeScript'],
-    github: 'https://github.com/yash-278/brew-index',
   },
 ]
 
@@ -40,15 +46,17 @@ export default function ProjectsSection() {
                   <h3 className="text-lg font-semibold text-text transition-colors duration-150 group-hover:text-accent">
                     {project.name}
                   </h3>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View ${project.name} on GitHub`}
-                    className="shrink-0 font-mono text-xs text-text-muted transition-colors duration-150 hover:text-accent"
-                  >
-                    GitHub →
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${project.name} on GitHub`}
+                      className="shrink-0 font-mono text-xs text-text-muted transition-colors duration-150 hover:text-accent"
+                    >
+                      GitHub →
+                    </a>
+                  )}
                 </div>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-text-muted">
                   {project.description}
