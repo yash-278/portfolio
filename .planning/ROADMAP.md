@@ -84,7 +84,11 @@ Plans:
   3. Fetching `/robots.txt` on the production domain returns `Allow: /`; on a Vercel preview URL it returns `Disallow: /`.
   4. Fetching `/feed.xml` returns valid RSS 2.0 XML with at least one `<item>` containing title, link, pubDate, and description.
   5. Navigating a browser to `blog.yashkadam.com` (or any path under it) issues a 308 permanent redirect and lands at `yashkadam.com/blog`.
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 04-01-PLAN.md — metadataBase + post OG metadata + opengraph-image.tsx (branded OG per post)
+- [ ] 04-02-PLAN.md — sitemap.ts + robots.ts + feed.xml RSS Route Handler
+- [ ] 04-03-PLAN.md — proxy.ts subdomain redirect (blog.yashkadam.com → yashkadam.com/blog)
 
 ### Phase 5: Polish & Analytics
 **Goal**: Vercel Analytics is capturing real pageview data; scroll animations are tuned to be subtle and non-distracting; all project links are verified live; and a Lighthouse run on the deployed site confirms Core Web Vitals pass.
