@@ -100,7 +100,10 @@ Plans:
   2. A Lighthouse audit run against the deployed production URL scores LCP under 2.5s, CLS under 0.1, and INP under 200ms.
   3. Every project live demo link and GitHub link in the Projects section resolves with a 200 response (no dead links).
   4. All Framer Motion scroll entrance animations use opacity + small Y translate only; no `layout` prop appears on scroll-heavy components; and no section triggers more than one animation per viewport entry.
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 05-01-PLAN.md — Analytics + SpeedInsights wired into layout, brew-index dead link removed
+- [ ] 05-02-PLAN.md — Animation audit, Lighthouse CWV run, Vercel dashboard activation checkpoint
 
 ## Progress
 
@@ -113,4 +116,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Portfolio Page | 0/4 | Not started | - |
 | 3. Blog Infrastructure | 0/2 | Not started | - |
 | 4. SEO & Deployment | 0/? | Not started | - |
-| 5. Polish & Analytics | 0/? | Not started | - |
+| 5. Polish & Analytics | 0/2 | Not started | - |
