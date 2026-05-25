@@ -22,8 +22,12 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yashkadam.com'),
   title: 'Yash Kadam — Technical Lead',
   description: 'Technical Lead and fullstack developer. I write code, lead teams, and ship things.',
+  openGraph: {
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
+  },
 }
 
 export default function RootLayout({
