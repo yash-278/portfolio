@@ -26,6 +26,14 @@ export function getAllPosts(): PostMeta[] {
       // Only include published posts
       if (!data.published) return null
 
+      // Validate required frontmatter fields to avoid undefined poisoning PostMeta
+      const requiredFields = ['title', 'date', 'description'] as const
+      const missing = requiredFields.filter((f) => !data[f])
+      if (missing.length > 0) {
+        console.warn(`Skipping ${filename}: missing frontmatter fields: ${missing.join(', ')}`)
+        return null
+      }
+
       // Pass frontmatter-stripped body to avoid counting YAML words in reading time
       const { text } = readingTime(content)
 
