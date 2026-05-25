@@ -1,13 +1,60 @@
-import TestPost from '@/content/blog/test-post.mdx'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { getAllPosts } from '@/lib/posts'
 
 export function generateStaticParams() {
-  return [{ slug: 'test-post' }]
+  return getAllPosts().map((post) => ({ slug: post.slug }))
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export const dynamicParams = false
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const post = getAllPosts().find((p) => p.slug === slug)
+
+  if (!post) {
+    return { title: 'Post Not Found' }
+  }
+
+  return {
+    title: `${post.title} — Yash Kadam`,
+    description: post.description,
+  }
+}
+
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let Post: React.ComponentType<any>
+
+  try {
+    const module = await import(`@/content/blog/${slug}.mdx`)
+    Post = module.default
+  } catch {
+    notFound()
+  }
+
   return (
-    <article className="mx-auto max-w-3xl px-4 py-16">
-      <TestPost />
-    </article>
+    <>
+      <Link
+        href="/blog"
+        className="mb-8 inline-flex items-center gap-1 font-mono text-xs text-text-muted transition-colors duration-150 hover:text-accent"
+      >
+        ← All posts
+      </Link>
+      <article className="prose dark:prose-invert max-w-none">
+        <Post />
+      </article>
+    </>
   )
 }
