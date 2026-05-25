@@ -19,17 +19,22 @@ A first-time visitor (developer, potential client, or collaborator) should leave
 - [x] Shared Navbar and Footer visible on all pages (FOUND-05) — Validated in Phase 1: Foundation
 - [x] NEXT_PUBLIC_SITE_URL=https://yashkadam.com set in Vercel env vars (FOUND-06) — Validated in Phase 1: Foundation
 
+### Validated
+
+- [x] Hero section with name, title, and short pitch — Phase 2
+- [x] About section with current role (Technical Lead at KingsleyGate) and brief career arc — Phase 2
+- [x] Work history timeline (current + previous roles) — Phase 2
+- [x] Projects section showcasing Nekomori (Brew Index dead link removed) — Phase 2 + Phase 5
+- [x] Blog at /blog with MDX-based authoring (markdown files, git commit, auto-deploy) — Phase 3
+- [x] Contact section with links: email, LinkedIn, GitHub, Twitter — Phase 2
+- [x] Blog subdomain redirect: blog.yashkadam.com → yashkadam.com/blog — Phase 4
+- [x] Vercel deployment with custom domain yashkadam.com — Phase 4
+- [x] Vercel Analytics + Speed Insights wired and active — Phase 5
+- [x] Core Web Vitals: LCP=2509ms, CLS=0, INP=0ms, score 97/100 — Phase 5
+
 ### Active
 
-- [ ] Hero section with name, title, and short pitch
-- [ ] About section with current role (Technical Lead at KingsleyGate) and brief career arc
-- [ ] Work history timeline (current + previous roles)
-- [ ] Projects section showcasing Nekomori and Brew Index (and optionally others)
-- [ ] Skills / tech stack section (JS, TS, React, Node, Express, MongoDB, Tailwind, Figma)
-- [ ] Blog at /blog with MDX-based authoring (markdown files, git commit, auto-deploy)
-- [ ] Contact section with links: email, LinkedIn, GitHub, Twitter
-- [ ] Blog subdomain redirect: blog.yashkadam.com → yashkadam.com/blog
-- [ ] Vercel deployment with custom domain yashkadam.com
+None — milestone v1.0 complete.
 
 ### Out of Scope
 
@@ -89,7 +94,18 @@ This document evolves at phase transitions and milestone boundaries.
 
 ## Current State
 
-Phase 4 complete — SEO & Deployment. Site is production-ready: OG images per blog post (next/og ImageResponse), full openGraph/twitter metadata, sitemap.xml, robots.txt (env-aware), RSS feed at /feed.xml, and proxy.ts subdomain redirect for blog.yashkadam.com → yashkadam.com/blog. NEXT_PUBLIC_SITE_URL updated to https://www.yashkadam.com to ensure OG image URLs resolve correctly on Vercel.
+**Milestone v1.0 complete** — all 5 phases done (2026-05-25).
+
+The site at yashkadam.com is a statically generated Next.js 16 portfolio + MDX blog with:
+- Full five-section portfolio (Hero, About, Work, Projects, Contact) with Framer Motion scroll animations
+- MDX blog pipeline via @next/mdx + rehype-pretty-code; seed post live at /blog
+- OG images per page and per blog post (next/og ImageResponse)
+- sitemap.xml, robots.txt (env-aware), RSS feed at /feed.xml
+- blog.yashkadam.com → yashkadam.com/blog subdomain redirect via proxy.ts middleware
+- Vercel Analytics + Speed Insights active on production
+- Core Web Vitals: LCP=2509ms, CLS=0, INP=0ms, performance score 97/100
+
+No active requirements remain. The roadmap is complete.
 
 ---
-*Last updated: 2026-05-25 after Phase 4: SEO & Deployment*
+*Last updated: 2026-05-25 after Phase 5: Polish & Analytics — Milestone v1.0 complete*
