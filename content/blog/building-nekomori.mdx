@@ -12,9 +12,9 @@ Nekomori is an anime schedule tracker and personal watchlist manager. On the sur
 
 ## The Problem
 
-The original architecture was naive: every page load triggered a fresh API call to the MyAnimeList API. View your watchlist — API call. Check if a new episode is out — API call. Mark something as watched — API call to update, followed by another to re-fetch.
+The original architecture was naive: every page load triggered a fresh API call to the AniList GraphQL API. View your watchlist — API call. Check if a new episode is out — API call. Mark something as watched — API call to update, followed by another to re-fetch.
 
-MAL's public API has a rate limit of 90 requests per minute. That sounds like plenty until you realize a single list view could fan out into a dozen requests for individual show details. With 40 shows on my test account, I was hitting the cap inside three navigations.
+AniList's API has a rate limit of 90 requests per minute. That sounds like plenty until you realize a single list view could fan out into a dozen queries for individual media details. With 40 shows on my test account, I was hitting the cap inside three navigations.
 
 The UX consequence was worse than the numbers: every interaction had a spinner, and marking a show as watched felt like submitting a form to a distant server rather than checking a checkbox in a local app.
 
@@ -26,7 +26,7 @@ The core principle is **local-first state with background sync**:
 
 1. The watchlist state lives in a local database (SQLite via Drizzle ORM in the Next.js API routes).
 2. The app reads exclusively from local state — no API calls on page render.
-3. A background sync job refreshes stale data from MAL on a schedule, well within rate limits.
+3. A background sync job refreshes stale data from AniList on a schedule, well within rate limits.
 4. Mutations (marking episodes watched, updating watch status) update local state immediately and queue a sync operation — they don't wait for the API.
 
 This separates concerns cleanly: the UI is always fast because it reads from local storage; correctness is eventually guaranteed by the sync layer.
@@ -64,7 +64,7 @@ async function syncStalePosts(batchSize = 10): Promise<void> {
         .set({ syncStatus: 'syncing' })
         .where(eq(syncQueue.animeId, record.animeId))
 
-      const freshData = await malClient.getAnimeDetails(record.animeId)
+      const freshData = await anilistClient.getMediaDetails(record.animeId)
       await upsertAnimeRecord(freshData)
 
       await db
@@ -86,7 +86,7 @@ async function syncStalePosts(batchSize = 10): Promise<void> {
 }
 ```
 
-The batch size of 10 combined with a 1-second delay between batches keeps the request rate well under MAL's limit even when 200+ records need syncing after a cold start.
+The batch size of 10 combined with a 1-second delay between batches keeps the request rate well under AniList's limit even when 200+ records need syncing after a cold start.
 
 ## Optimistic Updates
 
@@ -132,7 +132,7 @@ The key detail: `revalidate: false` prevents SWR from immediately re-fetching af
 
 ## Lessons Learned
 
-**Rate limits force good architecture.** The MAL rate limit felt like a constraint, but it pushed me toward a design that's actually better for the user. Request-on-every-render is never the right pattern for external APIs.
+**Rate limits force good architecture.** AniList's rate limit felt like a constraint, but it pushed me toward a design that's actually better for the user. Request-on-every-render is never the right pattern for external APIs.
 
 **Local-first is not offline-first.** Nekomori still requires a network connection to sync — it's not a true offline app. But "reads from local, writes sync in background" dramatically reduces the number of user-facing network waits. That's most of the UX win without the full complexity of conflict resolution.
 
