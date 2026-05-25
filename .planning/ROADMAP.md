@@ -69,7 +69,7 @@ Plans:
   3. `getAllPosts()` called from a Node script returns a correctly typed array with `slug`, `title`, `date`, `description`, `tags`, and `readingTime` fields for every `.mdx` file in `content/blog/`.
 **Plans**: 2 plans
 Plans:
-- [ ] 03-01-PLAN.md — Config + data layer: rehype-pretty-code, typography plugin, lib/posts.ts, blog sub-layout, test-post fix
+- [x] 03-01-PLAN.md — Config + data layer: rehype-pretty-code, typography plugin, lib/posts.ts, blog sub-layout, test-post fix
 - [ ] 03-02-PLAN.md — Blog index + post detail + Nekomori seed post (complete vertical slice)
 **UI hint**: yes
 
