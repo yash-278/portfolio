@@ -89,7 +89,7 @@ This document evolves at phase transitions and milestone boundaries.
 
 ## Current State
 
-Phase 1 complete — Next.js 16.2.6 scaffold running on Vercel with Tailwind v3, MDX pipeline, dark-mode FOUC prevention, LazyMotion, Navbar, and Footer. Build exits 0. /blog/test-post statically generated as proof-of-concept.
+Phase 4 complete — SEO & Deployment. Site is production-ready: OG images per blog post (next/og ImageResponse), full openGraph/twitter metadata, sitemap.xml, robots.txt (env-aware), RSS feed at /feed.xml, and proxy.ts subdomain redirect for blog.yashkadam.com → yashkadam.com/blog. NEXT_PUBLIC_SITE_URL updated to https://www.yashkadam.com to ensure OG image URLs resolve correctly on Vercel.
 
 ---
-*Last updated: 2026-05-24 after Phase 1: Foundation*
+*Last updated: 2026-05-25 after Phase 4: SEO & Deployment*
