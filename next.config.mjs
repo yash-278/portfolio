@@ -1,4 +1,5 @@
 import createMDX from '@next/mdx'
+import rehypePrettyCode from 'rehype-pretty-code'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,10 +9,12 @@ const nextConfig = {
   },
 }
 
-// rehype-pretty-code added in Phase 3 (blog rendering) — Turbopack serialization
-// constraint prevents passing function references in loader options at build time.
 const withMDX = createMDX({
-  options: {},
+  options: {
+    rehypePlugins: [
+      [rehypePrettyCode, { theme: 'github-dark' }],
+    ],
+  },
 })
 
 export default withMDX(nextConfig)
