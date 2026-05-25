@@ -102,7 +102,7 @@ Plans:
   4. All Framer Motion scroll entrance animations use opacity + small Y translate only; no `layout` prop appears on scroll-heavy components; and no section triggers more than one animation per viewport entry.
 **Plans**: 2 plans
 Plans:
-- [ ] 05-01-PLAN.md — Analytics + SpeedInsights wired into layout, brew-index dead link removed
+- [x] 05-01-PLAN.md — Analytics + SpeedInsights wired into layout, brew-index dead link removed
 - [ ] 05-02-PLAN.md — Animation audit, Lighthouse CWV run, Vercel dashboard activation checkpoint
 
 ## Progress
