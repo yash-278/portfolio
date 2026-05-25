@@ -21,9 +21,23 @@ export async function generateMetadata({
     return { title: 'Post Not Found' }
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yashkadam.com'
+
   return {
     title: `${post.title} — Yash Kadam`,
     description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `${siteUrl}/blog/${post.slug}`,
+      type: 'article',
+      publishedTime: post.date,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+    },
   }
 }
 
