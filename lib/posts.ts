@@ -21,13 +21,13 @@ export function getAllPosts(): PostMeta[] {
     .map((filename) => {
       const slug = filename.replace(/\.mdx$/, '')
       const raw = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf-8')
-      const { data } = matter(raw)
+      const { data, content } = matter(raw)
 
       // Only include published posts
       if (!data.published) return null
 
       // Pass frontmatter-stripped body to avoid counting YAML words in reading time
-      const { text } = readingTime(matter(raw).content)
+      const { text } = readingTime(content)
 
       return {
         slug,
