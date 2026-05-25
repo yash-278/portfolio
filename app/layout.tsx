@@ -6,6 +6,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { LazyMotion, domAnimation } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const geist = Geist({
@@ -63,6 +65,8 @@ export default function RootLayout({
           </main>
         </LazyMotion>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
