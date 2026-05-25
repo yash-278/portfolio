@@ -70,7 +70,7 @@ Plans:
 **Plans**: 2 plans
 Plans:
 - [x] 03-01-PLAN.md — Config + data layer: rehype-pretty-code, typography plugin, lib/posts.ts, blog sub-layout, test-post fix
-- [ ] 03-02-PLAN.md — Blog index + post detail + Nekomori seed post (complete vertical slice)
+- [x] 03-02-PLAN.md — Blog index + post detail + Nekomori seed post (complete vertical slice)
 **UI hint**: yes
 
 ### Phase 4: SEO & Deployment
