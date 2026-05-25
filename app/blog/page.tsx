@@ -13,6 +13,7 @@ function formatDate(isoDate: string): string {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC', // date-only strings are UTC midnight; force display in UTC
   }).format(new Date(isoDate))
 }
 
