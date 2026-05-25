@@ -1,11 +1,11 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.0
-milestone_name: milestone
+milestone_name: MVP
 status: complete
-stopped_at: phase 05 complete (2026-05-25)
-last_updated: "2026-05-25T16:30:00.000Z"
-last_activity: 2026-05-25 -- Phase 05 execution complete — all 5 phases done
+stopped_at: milestone v1.0 complete (2026-05-25)
+last_updated: "2026-05-25T17:00:00.000Z"
+last_activity: 2026-05-25 -- Milestone v1.0 archived and tagged
 progress:
   total_phases: 5
   completed_phases: 5
@@ -21,49 +21,37 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-25)
 
 **Core value:** A first-time visitor (developer, potential client, or collaborator) should leave knowing exactly who Yash is, what he's built, and how to reach him — in under 60 seconds.
-**Current focus:** Milestone v1.0 complete — all 5 phases done
+**Current focus:** Milestone v1.0 complete — planning next milestone
 
 ## Current Position
 
-Phase: 05 (polish-analytics) — COMPLETE
-Plan: 2 of 2
-Status: All phases and plans complete
+Milestone v1.0 complete. All 5 phases, 15 plans done.
+Next: `/gsd-new-milestone` to plan v1.1.
 
-Progress: [██████████] 100%
+## Deferred Items
 
-## Performance Metrics
+Items acknowledged and deferred at milestone close on 2026-05-25:
 
-**Velocity:**
+| Category | Item | Status |
+|----------|------|--------|
+| uat_gap | Phase 04: 04-HUMAN-UAT.md — 1 pending scenario | partial |
+| verification_gap | Phase 01: 01-VERIFICATION.md | human_needed |
+| verification_gap | Phase 03: 03-VERIFICATION.md | human_needed |
+| verification_gap | Phase 04: 04-VERIFICATION.md | human_needed |
+| verification_gap | Phase 05: 05-VERIFICATION.md | human_needed |
 
-- Total plans completed: 15
-- Average duration: —
-- Total execution time: ~3 sessions
-
-**By Phase:**
-
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| 01 | 4 | - | - |
-| 02 | 4 | - | - |
-| 03 | 2 | - | - |
-| 04 | 3 | - | - |
-| 05 | 2 | - | - |
-
-*Updated after each plan completion*
+All are documentation sign-off flags (human_needed). No unimplemented features.
 
 ## Accumulated Context
 
 ### Decisions
 
-Decisions are logged in PROJECT.md Key Decisions table.
+See PROJECT.md Key Decisions table for full log.
 
-- Roadmap: Use `@next/mdx` exclusively — `next-mdx-remote` archived Feb 2026, `contentlayer` abandoned Jun 2023.
-- Roadmap: Start from v2 branch (Next.js 14 + Framer Motion); upgrade to Next.js 16.2.6.
-- Roadmap: Dark mode FOUC fix and `LazyMotion` pattern are Phase 1 — cannot be retrofitted safely.
-- Roadmap: Skills shown as tech stack tags on project cards — no separate skills section or progress bars.
-- Roadmap: Blog subdomain redirect requires `middleware.ts`, not Vercel dashboard (dashboard cannot redirect to a path).
-- Phase 05: Vercel Analytics placed outside LazyMotion boundary — both packages carry their own 'use client' directive.
-- Phase 05: brew-index GitHub link removed (confirmed 404); github field typed as `https://` template literal for compile-time safety.
+Key decisions carried forward:
+- `@next/mdx` for blog — `next-mdx-remote` archived, `contentlayer` abandoned
+- Vercel Analytics outside LazyMotion boundary
+- `github` field typed as `` `https://${string}` `` template literal
 
 ### Pending Todos
 
@@ -73,14 +61,8 @@ None.
 
 None — milestone v1.0 complete.
 
-## Deferred Items
-
-| Category | Item | Status | Deferred At |
-|----------|------|--------|-------------|
-| *(none)* | | | |
-
 ## Session Continuity
 
-Last session: 2026-05-25T16:30:00.000Z
-Stopped at: Milestone v1.0 complete — all phases done
+Last session: 2026-05-25T17:00:00.000Z
+Stopped at: Milestone v1.0 archived
 Resume file: None
