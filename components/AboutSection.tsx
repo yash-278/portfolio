@@ -1,5 +1,5 @@
 // Server Component — no 'use client'
-import SectionReveal from '@/components/SectionReveal'
+import SectionReveal from "@/components/SectionReveal";
 
 export default function AboutSection() {
   return (
@@ -10,8 +10,13 @@ export default function AboutSection() {
     >
       <div className="mx-auto max-w-5xl px-6">
         <SectionReveal>
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent">About</p>
-          <h2 id="about-heading" className="mt-2 text-3xl font-semibold text-text">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+            About
+          </p>
+          <h2
+            id="about-heading"
+            className="mt-2 text-3xl font-semibold text-text"
+          >
             Who I am
           </h2>
         </SectionReveal>
@@ -20,7 +25,7 @@ export default function AboutSection() {
           <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-text-muted">
             <p>
               I&apos;m a Technical Lead at KingsleyGate, where I architect and
-              ship fullstack products across the entire stack — from React
+              ship fullstack products across the entire stack from React
               frontends to Node APIs to the deployment pipelines that keep
               everything running.
             </p>
@@ -36,7 +41,14 @@ export default function AboutSection() {
 
         <SectionReveal delay={0.2}>
           <div className="mt-10 flex flex-wrap gap-2">
-            {['TypeScript', 'React', 'Node.js', 'Go', 'PostgreSQL', 'Docker'].map((skill) => (
+            {[
+              "TypeScript",
+              "React",
+              "Node.js",
+              "Go",
+              "PostgreSQL",
+              "Docker",
+            ].map((skill) => (
               <span
                 key={skill}
                 className="rounded-md bg-surface px-3 py-1.5 font-mono text-xs text-text-muted"
@@ -48,5 +60,5 @@ export default function AboutSection() {
         </SectionReveal>
       </div>
     </section>
-  )
+  );
 }
