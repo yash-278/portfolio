@@ -4,11 +4,10 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-surface/70">
-      <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-4 px-6 py-8 sm:flex-row sm:items-center">
+    <footer>
+      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 py-8 sm:flex-row sm:items-center">
         <div>
-          <p className="text-base text-text">Yash Kadam</p>
-          <p className="text-sm text-text-muted">© 2025 Yash Kadam</p>
+          <p className="text-sm text-text-muted">© 2026 Yash Kadam</p>
         </div>
         <div className="flex items-center gap-2">
           <a

@@ -22,7 +22,7 @@ export default async function Image({
     (
       <div
         style={{
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #111 60%, #1a1020 100%)',
+          background: '#0d1b1b',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -32,11 +32,11 @@ export default async function Image({
           padding: '80px',
         }}
       >
-        <p style={{ color: '#818cf8', fontSize: 24, margin: '0 0 24px', fontFamily: 'system-ui' }}>
+        <p style={{ color: '#ecbb73', fontSize: 24, margin: '0 0 24px', fontFamily: 'system-ui' }}>
           yashkadam.com
         </p>
         <h1
-          style={{ color: '#f8fafc', fontSize: 64, lineHeight: 1.1, margin: 0, fontFamily: 'system-ui' }}
+          style={{ color: '#e9efe9', fontSize: 64, lineHeight: 1.1, margin: 0, fontFamily: 'system-ui' }}
         >
           {title}
         </h1>

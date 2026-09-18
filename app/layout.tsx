@@ -2,7 +2,7 @@
 // Root layout: fonts, FOUC script, LazyMotion wrapper, Navbar, Footer
 // NOTE: Do NOT add 'use client' here — root layout must remain a Server Component.
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Albert_Sans, Geist_Mono } from 'next/font/google'
 import { LazyMotion, domAnimation } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -10,7 +10,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
-const geist = Geist({
+const albertSans = Albert_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -26,7 +26,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yashkadam.com'),
   title: 'Yash Kadam — Technical Lead',
-  description: 'Technical Lead and fullstack developer. I write code, lead teams, and ship things.',
+  description:
+    'Technical lead and fullstack developer. I build web products end to end, and lead the team that ships them.',
   openGraph: {
     images: [{ url: '/og.png', width: 1200, height: 630 }],
   },
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${albertSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <head suppressHydrationWarning>
         {/* FOUC prevention: must be first child of <head>, before any stylesheet — no defer/async */}
         {/* Content is a static string constant — no user input, no XSS risk */}

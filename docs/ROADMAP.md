@@ -22,7 +22,7 @@
 - [x] Phase 5: Polish & Analytics (2/2 plans) — completed 2026-05-25
   - Vercel Analytics + SpeedInsights; animation audit; Lighthouse LCP=2509ms, CLS=0, TBT=0ms, score 97/100
 
-See `.planning/milestones/v1.0-ROADMAP.md` for full phase details.
+See `docs/milestones/v1.0-ROADMAP.md` for full phase details.
 
 </details>
 

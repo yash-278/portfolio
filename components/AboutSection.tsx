@@ -1,64 +1,39 @@
 // Server Component — no 'use client'
 import SectionReveal from "@/components/SectionReveal";
 
+const stack = ["TypeScript", "React", "Node.js", "Go", "PostgreSQL", "Docker"];
+
 export default function AboutSection() {
   return (
-    <section
-      id="about"
-      aria-labelledby="about-heading"
-      className="py-24 scroll-mt-14 bg-surface/40"
-    >
-      <div className="mx-auto max-w-5xl px-6">
-        <SectionReveal>
-          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-            About
+    <section id="about" aria-labelledby="about-heading" className="scroll-mt-20">
+      <SectionReveal>
+        <h2 id="about-heading" className="font-semibold text-text-muted">
+          About
+        </h2>
+        <div className="mt-5 max-w-xl space-y-4 text-lg leading-relaxed md:text-xl md:leading-relaxed">
+          <p className="text-text">
+            I&apos;m a Technical Lead at KingsleyGate, where I&apos;ve run
+            architecture and delivery for fullstack products since 2022: React
+            frontends, Node.js APIs, and the deployment pipelines behind them.
           </p>
-          <h2
-            id="about-heading"
-            className="mt-2 text-3xl font-semibold text-text"
-          >
-            Who I am
-          </h2>
-        </SectionReveal>
-
-        <SectionReveal delay={0.1}>
-          <div className="mt-8 max-w-2xl space-y-4 text-base leading-relaxed text-text-muted">
-            <p>
-              I&apos;m a Technical Lead at KingsleyGate, where I architect and
-              ship fullstack products across the entire stack from React
-              frontends to Node APIs to the deployment pipelines that keep
-              everything running.
-            </p>
-            <p>
-              I got here through years of building things on my own and learning
-              what actually matters when software has to work at scale. Lately
-              I&apos;ve been shifting more focus toward backend systems and Go,
-              chasing the part of the stack where performance and correctness
-              really count.
-            </p>
-          </div>
-        </SectionReveal>
-
-        <SectionReveal delay={0.2}>
-          <div className="mt-10 flex flex-wrap gap-2">
-            {[
-              "TypeScript",
-              "React",
-              "Node.js",
-              "Go",
-              "PostgreSQL",
-              "Docker",
-            ].map((skill) => (
-              <span
-                key={skill}
-                className="rounded-md bg-surface px-3 py-1.5 font-mono text-xs text-text-muted"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </SectionReveal>
-      </div>
+          <p className="text-text-muted">
+            I got here by building things on my own and finding out what holds
+            up once software has real users. Lately more of my time goes into
+            backend systems and Go, where performance and correctness matter
+            most.
+          </p>
+        </div>
+        <ul aria-label="Main stack" className="mt-8 flex flex-wrap gap-2">
+          {stack.map((skill) => (
+            <li
+              key={skill}
+              className="rounded-full border border-border px-3.5 py-1.5 text-[0.925rem] text-text"
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </SectionReveal>
     </section>
   );
 }

@@ -23,5 +23,5 @@
 - All are verification/UAT `human_needed` flags (documentation sign-offs, not unimplemented features)
 
 **Archive:**
-- Roadmap: `.planning/milestones/v1.0-ROADMAP.md`
-- Requirements: `.planning/milestones/v1.0-REQUIREMENTS.md`
+- Roadmap: `docs/milestones/v1.0-ROADMAP.md`
+- Requirements: `docs/milestones/v1.0-REQUIREMENTS.md`

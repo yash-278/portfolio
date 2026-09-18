@@ -107,19 +107,11 @@ yashkadam.com is live: statically generated Next.js 16 portfolio + MDX blog with
 
 ---
 
-## Evolution
+## Keeping This Current
 
-**After each phase transition** (via `/gsd-transition`):
-1. Requirements invalidated? → Move to Out of Scope with reason
-2. Requirements validated? → Move to Validated with phase reference
-3. New requirements emerged? → Add to Active
-4. Decisions to log? → Add to Key Decisions
-
-**After each milestone** (via `/gsd-complete-milestone`):
-1. Full review of all sections
-2. Core Value check — still the right priority?
-3. Audit Out of Scope — reasons still valid?
-4. Update Context with current state
+When requirements change, move them between **Validated**, **Active**, and **Out of Scope** —
+always recording the reason. Log notable technical or product calls in **Key Decisions** as they
+are made, and refresh **Context** and **Current State** whenever the shipped reality drifts.
 
 ---
 *Last updated: 2026-05-25 after v1.0 milestone complete*
