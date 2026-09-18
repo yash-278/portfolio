@@ -36,8 +36,8 @@ export default function BlogPage() {
               >
                 {post.title}
               </Link>
-              <p className="mt-1 font-mono text-xs text-text-muted">
-                {formatDate(post.date)} · {post.readingTime}
+              <p className="mt-1 text-sm text-text-muted">
+                {formatDate(post.date)}, {post.readingTime}
               </p>
               <p className="mt-2 text-sm leading-relaxed text-text-muted">
                 {post.description}
@@ -47,7 +47,7 @@ export default function BlogPage() {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-md bg-surface px-2.5 py-1 font-mono text-xs text-text-muted"
+                      className="rounded-full border border-border px-3 py-1 text-xs text-text-muted"
                     >
                       {tag}
                     </span>

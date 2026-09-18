@@ -18,7 +18,10 @@ const config: Config = {
       },
       colors: {
         bg: 'var(--color-bg)',
-        surface: 'var(--color-surface)',
+        surface: {
+          DEFAULT: 'var(--color-surface)',
+          raised: 'var(--color-surface-raised)',
+        },
         text: {
           DEFAULT: 'var(--color-text)',
           muted: 'var(--color-text-muted)',

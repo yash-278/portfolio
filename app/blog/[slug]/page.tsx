@@ -52,8 +52,8 @@ export default async function BlogPost({
   let Post: React.ComponentType<any>
 
   try {
-    const module = await import(`@/content/blog/${slug}.mdx`)
-    Post = module.default
+    const mdx = await import(`@/content/blog/${slug}.mdx`)
+    Post = mdx.default
   } catch {
     notFound()
   }
@@ -62,7 +62,7 @@ export default async function BlogPost({
     <>
       <Link
         href="/blog"
-        className="mb-8 inline-flex items-center gap-1 font-mono text-xs text-text-muted transition-colors duration-150 hover:text-accent"
+        className="mb-8 inline-flex items-center gap-1 text-sm text-text-muted transition-colors duration-150 hover:text-accent"
       >
         ← All posts
       </Link>
