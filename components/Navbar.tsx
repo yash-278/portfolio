@@ -15,6 +15,10 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname()
 
+  // The Steadyfolio product page carries its own header and its own back-link home,
+  // so the portfolio chrome would read as a second, competing navigation.
+  if (pathname.startsWith('/steadyfolio')) return null
+
   return (
     <header className="fixed left-0 right-0 top-0 z-40 h-14 bg-bg/85 backdrop-blur-md">
       <nav

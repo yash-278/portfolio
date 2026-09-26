@@ -18,4 +18,24 @@
     --font-sans: 'Albert Sans', system-ui, -apple-system, sans-serif;
     --font-mono: 'Geist Mono', 'Fira Code', ui-monospace, monospace;
   }
+
+  /* Steadyfolio product page (/steadyfolio) runs on the iOS app's own dark tokens,
+     not the site palette — the same sanctioned exception ProjectPreview has, and for
+     the same reason: these values belong to the product being shown, so they must not
+     drift when this site gains a light-mode toggle. Source of truth is Steadyfolio's
+     design system in .scratch/finance-app/design-v2/DESIGN.md (the dark column).
+     Kept as raw custom properties rather than Tailwind theme colours so the shared
+     semantic namespace stays small; consume them as bg-[var(--sf-canvas)]. */
+  [data-site='steadyfolio'] {
+    --sf-canvas: #16161f;
+    --sf-surface: #23232e;
+    --sf-raised: #2f2e3d;
+    --sf-ink: #f2f1f8;
+    --sf-muted: #a9a7b8;
+    --sf-tertiary: #7c7a90;
+    --sf-iris: #a9a0f2;
+    --sf-soft: #2f2c48;
+    --sf-line: #33323f;
+    --sf-positive: #8bcbb2;
+  }
 }

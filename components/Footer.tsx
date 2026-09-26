@@ -1,8 +1,17 @@
+'use client'
+
 // Inline SVG brand icons — lucide-react v1.x removed brand icons.
 // Using minimal inline SVGs to keep the Footer dependency-free while
 // matching the D-07 social link requirement.
 
+import { usePathname } from 'next/navigation'
+
 export default function Footer() {
+  const pathname = usePathname()
+
+  // See the matching note in Navbar: /steadyfolio ships its own footer.
+  if (pathname.startsWith('/steadyfolio')) return null
+
   return (
     <footer>
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 py-8 sm:flex-row sm:items-center">

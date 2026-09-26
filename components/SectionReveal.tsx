@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { m } from 'framer-motion'
+import { m, useReducedMotion } from 'framer-motion'
 
 const variants = {
   hidden: { opacity: 0, y: 24 },
@@ -12,15 +12,22 @@ interface SectionRevealProps {
   children: React.ReactNode
   delay?: number
   animate?: 'scroll' | 'mount'
+  className?: string
 }
 
 export default function SectionReveal({
   children,
   delay = 0,
   animate = 'scroll',
+  className,
 }: SectionRevealProps) {
-  const motionProps =
-    animate === 'mount'
+  // Reveals are decoration, so they collapse to the finished state rather than
+  // replaying instantly when the reader has asked for less motion.
+  const reduceMotion = useReducedMotion()
+
+  const motionProps = reduceMotion
+    ? { initial: 'visible' as const }
+    : animate === 'mount'
       ? { initial: 'hidden', animate: 'visible' }
       : {
           initial: 'hidden',
@@ -30,9 +37,10 @@ export default function SectionReveal({
 
   return (
     <m.div
+      className={className}
       variants={variants}
       {...motionProps}
-      transition={{ duration: 0.5, ease: 'easeOut', delay }}
+      transition={reduceMotion ? { duration: 0 } : { duration: 0.5, ease: 'easeOut', delay }}
     >
       {children}
     </m.div>
