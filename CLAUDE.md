@@ -60,20 +60,21 @@ Single Next.js App Router codebase, fully statically generated. The portfolio is
 | `/feed.xml` | `app/feed.xml/route.ts` | Hand-rolled RSS 2.0 with XML escaping |
 | `/sitemap.xml` | `app/sitemap.ts` | Static pages + every post |
 | `/robots.txt` | `app/robots.ts` | Allows crawling only when `VERCEL_ENV === 'production'` |
+| `/steadyfolio` | `app/steadyfolio/page.tsx` | Product landing page with its own layout, header and footer; `Navbar`/`Footer` opt out of this route. The beta button reads `TESTFLIGHT_URL` in `components/steadyfolio/beta.ts` |
 
 `proxy.ts` redirects `blog.yashkadam.com` → `https://www.yashkadam.com/blog` with a 308, production-gated.
 
 ### Layers
 
 - **`app/layout.tsx`** — root layout. Loads fonts, the dark-mode FOUC script, `Navbar`, `Footer`, and analytics; wraps `children` in `LazyMotion`.
-- **`components/`** — `HeroSection`, `ProjectsSection` (with `ProjectPreview`), `AboutSection`, `WritingSection`, `ContactSection`, plus shared `Navbar`, `Footer`, and the `SectionReveal` animation primitive.
+- **`components/`** — `HeroSection`, `ProjectsSection`, `AboutSection`, `WritingSection`, `ContactSection`, plus shared `Navbar`, `Footer`, and the `SectionReveal` animation primitive.
 - **`lib/posts.ts`** — the only content-reading module. `getAllPosts()` reads `content/blog/*.mdx`, parses frontmatter, filters to `published: true`, warns-and-skips posts missing `title`/`date`/`description`, computes reading time from the body, and sorts newest first. Everything (index, post metadata, sitemap, RSS, OG images) goes through it.
 - **`content/blog/*.mdx`** — the posts themselves.
 - **`lib/utils.ts`** — `cn()` class merge helper.
 
 ### Design tokens
 
-Colors and fonts are CSS custom properties declared in `app/globals.css` and exposed to Tailwind as semantic names in `tailwind.config.ts`: `bg`, `surface` / `surface-raised`, `text` / `text-muted`, `border`, `accent` / `accent-hover`, `destructive`, plus `font-sans` / `font-mono`. **Use the semantic names** (`bg-surface`, `text-text-muted`, `text-accent`) rather than raw palette values like `bg-zinc-900` — that indirection is what makes the light-mode toggle possible later. The palette is a dark teal-ink with a sand accent. The one sanctioned exception is `ProjectPreview`, whose raw hex values depict the projects' own light UIs and must not follow the site theme.
+Colors and fonts are CSS custom properties declared in `app/globals.css` and exposed to Tailwind as semantic names in `tailwind.config.ts`: `bg`, `surface` / `surface-raised`, `text` / `text-muted`, `border`, `accent` / `accent-hover`, `destructive`, plus `font-sans` / `font-mono`. **Use the semantic names** (`bg-surface`, `text-text-muted`, `text-accent`) rather than raw palette values like `bg-zinc-900` — that indirection is what makes the light-mode toggle possible later. The palette is a dark teal-ink with a sand accent. The one sanctioned exception is the `/steadyfolio` product page, which runs on the iOS app's own dark tokens (`--sf-*`, scoped under `[data-site='steadyfolio']` in `globals.css`) and must not follow the site theme.
 
 The site is currently **dark-only**. `darkMode: ['class']` is configured, but `dark` is force-added to `<html>` by an inline script and there is no toggle yet (deferred to v1.1).
 
