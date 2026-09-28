@@ -237,11 +237,11 @@ export default function TillwisePage() {
               id="beta-heading"
               className="max-w-2xl text-balance font-[family-name:var(--font-tl-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.6rem]"
             >
-              Tillwise is in internal testing.
+              Tillwise is in public beta.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--tl-muted)]">
-              It is my daily expense tracker while the ledger earns its trust. A public App Store
-              release comes after that.
+              Join through TestFlight and it installs like any other app. Send feedback with a
+              screenshot from the TestFlight app. The App Store release comes after the beta.
             </p>
             <BetaCta className="mt-8" />
             <p className="mt-6 text-[0.95rem] text-[var(--tl-tertiary)]">
