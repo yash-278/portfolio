@@ -32,10 +32,10 @@ export default function ContactSection() {
               opinion on?
             </h2>
             <a
-              href="mailto:yash@yashkadam.com"
+              href="mailto:yashkadam278@gmail.com"
               className="mt-7 inline-block text-xl text-accent underline underline-offset-[6px] transition-colors duration-150 hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:text-2xl"
             >
-              yash@yashkadam.com
+              yashkadam278@gmail.com
             </a>
           </SectionReveal>
 
