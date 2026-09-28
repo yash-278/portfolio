@@ -60,7 +60,8 @@ Single Next.js App Router codebase, fully statically generated. The portfolio is
 | `/feed.xml` | `app/feed.xml/route.ts` | Hand-rolled RSS 2.0 with XML escaping |
 | `/sitemap.xml` | `app/sitemap.ts` | Static pages + every post |
 | `/robots.txt` | `app/robots.ts` | Allows crawling only when `VERCEL_ENV === 'production'` |
-| `/steadyfolio` | `app/steadyfolio/page.tsx` | Product landing page with its own layout, header and footer; `Navbar`/`Footer` opt out of this route. The beta button reads `TESTFLIGHT_URL` in `components/steadyfolio/beta.ts` |
+| `/tillwise` | `app/tillwise/page.tsx` | Product landing page with its own layout, header and footer; `Navbar`/`Footer` opt out of this route. The beta button reads `TESTFLIGHT_URL` in `components/tillwise/beta.ts`. `/steadyfolio/*` (the app's name until build 6) redirects here from `next.config.mjs` |
+| `/tillwise/privacy` | `app/tillwise/privacy/page.tsx` | The app's privacy policy, linked from App Store Connect. Re-check it against the app whenever the app's data handling changes |
 
 `proxy.ts` redirects `blog.yashkadam.com` → `https://www.yashkadam.com/blog` with a 308, production-gated.
 
@@ -74,7 +75,7 @@ Single Next.js App Router codebase, fully statically generated. The portfolio is
 
 ### Design tokens
 
-Colors and fonts are CSS custom properties declared in `app/globals.css` and exposed to Tailwind as semantic names in `tailwind.config.ts`: `bg`, `surface` / `surface-raised`, `text` / `text-muted`, `border`, `accent` / `accent-hover`, `destructive`, plus `font-sans` / `font-mono`. **Use the semantic names** (`bg-surface`, `text-text-muted`, `text-accent`) rather than raw palette values like `bg-zinc-900` — that indirection is what makes the light-mode toggle possible later. The palette is a dark teal-ink with a sand accent. The one sanctioned exception is the `/steadyfolio` product page, which runs on the iOS app's own dark tokens (`--sf-*`, scoped under `[data-site='steadyfolio']` in `globals.css`) and must not follow the site theme.
+Colors and fonts are CSS custom properties declared in `app/globals.css` and exposed to Tailwind as semantic names in `tailwind.config.ts`: `bg`, `surface` / `surface-raised`, `text` / `text-muted`, `border`, `accent` / `accent-hover`, `destructive`, plus `font-sans` / `font-mono`. **Use the semantic names** (`bg-surface`, `text-text-muted`, `text-accent`) rather than raw palette values like `bg-zinc-900` — that indirection is what makes the light-mode toggle possible later. The palette is a dark teal-ink with a sand accent. The one sanctioned exception is the `/tillwise` product page, which runs on the iOS app's own dark tokens (`--tl-*`, scoped under `[data-site='tillwise']` in `globals.css`) and must not follow the site theme.
 
 The site is currently **dark-only**. `darkMode: ['class']` is configured, but `dark` is force-added to `<html>` by an inline script and there is no toggle yet (deferred to v1.1).
 
