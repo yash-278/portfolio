@@ -12,4 +12,4 @@
 export const TESTFLIGHT_URL: string | null = null
 
 export const BETA_EMAIL =
-  'mailto:yash@yashkadam.com?subject=Tillwise%20beta%20invite'
+  'mailto:yashkadam278@gmail.com?subject=Tillwise%20beta%20invite'

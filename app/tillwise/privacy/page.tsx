@@ -100,10 +100,10 @@ export default function TillwisePrivacyPage() {
           <p className="mt-3 max-w-2xl leading-relaxed text-[var(--tl-muted)]">
             Questions about this policy or the app go to{' '}
             <a
-              href="mailto:yash@yashkadam.com?subject=Tillwise%20privacy"
+              href="mailto:yashkadam278@gmail.com?subject=Tillwise%20privacy"
               className="text-[var(--tl-ink)] underline underline-offset-[5px] transition-colors duration-150 hover:text-[var(--tl-iris)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--tl-iris)]"
             >
-              yash@yashkadam.com
+              yashkadam278@gmail.com
             </a>
             .
           </p>
