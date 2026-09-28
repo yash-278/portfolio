@@ -11,6 +11,10 @@ const nextConfig = {
   turbopack: {
     root: dirname(fileURLToPath(import.meta.url)),
   },
+  // The app was called Steadyfolio until build 6; keep old links and shares working.
+  async redirects() {
+    return [{ source: '/steadyfolio/:path*', destination: '/tillwise/:path*', permanent: true }]
+  },
   experimental: {
     mdxRs: false, // REQUIRED: disable Rust MDX compiler so rehype plugins work
   },

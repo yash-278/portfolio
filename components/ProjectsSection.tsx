@@ -1,6 +1,6 @@
 // Server Component — no 'use client'
 // Three iPhone apps at three different stages, so they get three different
-// treatments rather than one card repeated. Only Steadyfolio has a shipped UI, and
+// treatments rather than one card repeated. Only Tillwise has a shipped UI, and
 // it is the only one shown with a screen; the other two are deliberately
 // typographic, because inventing a preview for an app with no code is a lie.
 import Image from 'next/image'
@@ -62,7 +62,7 @@ export default function ProjectsSection() {
             <div className="flex flex-col p-7 md:p-14">
               <div className="flex flex-wrap items-center gap-4">
                 <h3 className="text-4xl font-semibold leading-none tracking-tight text-text md:text-5xl">
-                  Steadyfolio
+                  Tillwise
                 </h3>
                 <span className="rounded-full border border-border px-3 py-1 text-sm text-text-muted">
                   In TestFlight
@@ -78,16 +78,16 @@ export default function ProjectsSection() {
                 Swift 6, SwiftUI, GRDB
               </p>
               <Link
-                href="/steadyfolio"
+                href="/tillwise"
                 className="mt-5 self-start rounded-full bg-accent px-5 py-2.5 text-[0.95rem] font-semibold text-bg transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                See Steadyfolio
+                See Tillwise
               </Link>
             </div>
             {/* A real capture from the app, cropped from the top. */}
             <div className="relative min-h-[22rem] overflow-hidden bg-surface-raised" aria-hidden="true">
               <Image
-                src="/steadyfolio/today.png"
+                src="/tillwise/today.png"
                 alt=""
                 width={644}
                 height={1400}

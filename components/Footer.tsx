@@ -9,8 +9,8 @@ import { usePathname } from 'next/navigation'
 export default function Footer() {
   const pathname = usePathname()
 
-  // See the matching note in Navbar: /steadyfolio ships its own footer.
-  if (pathname.startsWith('/steadyfolio')) return null
+  // See the matching note in Navbar: /tillwise ships its own footer.
+  if (pathname.startsWith('/tillwise')) return null
 
   return (
     <footer>

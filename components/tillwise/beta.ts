@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // THE ONE THING TO EDIT WHEN THE BETA OPENS.
 //
-// Steadyfolio is on *internal* TestFlight (Yash is the only tester), so there is
+// Tillwise is on *internal* TestFlight (Yash is the only tester), so there is
 // no public join link yet. While this is null the page shows a "Beta invites soon"
 // status with an email link beneath it, rather than a button that goes nowhere.
 //
@@ -12,4 +12,4 @@
 export const TESTFLIGHT_URL: string | null = null
 
 export const BETA_EMAIL =
-  'mailto:yash@yashkadam.com?subject=Steadyfolio%20beta%20invite'
+  'mailto:yash@yashkadam.com?subject=Tillwise%20beta%20invite'

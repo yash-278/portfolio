@@ -1,6 +1,6 @@
 // Server Component — no 'use client'
-// Frames a real Steadyfolio screenshot. These are actual captures from the app
-// (Design/Screenshots in the steadyfolio repo), so nothing here draws a fake UI.
+// Frames a real Tillwise screenshot. These are actual captures from the app
+// (Design/Screenshots in the app repo), so nothing here draws a fake UI.
 // The screenshots run to the bottom edge of a taller screen than we show, so each
 // one is cropped from the top and `fade` covers the cut with a wash to the canvas.
 import Image from 'next/image'
@@ -28,7 +28,7 @@ export default function PhoneShot({
     <div
       className={cn(
         // 40px frame radius. See the shape rule in the page header comment.
-        'relative overflow-hidden rounded-[2.25rem] bg-[var(--sf-surface)]',
+        'relative overflow-hidden rounded-[2.25rem] bg-[var(--tl-surface)]',
         'ring-1 ring-inset ring-white/10',
         'shadow-[0_40px_80px_-32px_rgba(0,0,0,0.75)]',
         className
@@ -46,7 +46,7 @@ export default function PhoneShot({
       {fade && (
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-[var(--sf-canvas)]"
+          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-[var(--tl-canvas)]"
         />
       )}
     </div>

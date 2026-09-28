@@ -1,27 +1,28 @@
 // Server Component — no 'use client'
 //
-// Steadyfolio product page. Two rules hold it together:
+// Tillwise product page. Two rules hold it together:
 //   Shape:  phone frames 2.25rem, cards 1.5rem (rounded-3xl), controls are pills.
-//   Colour: one accent, the app's iris, via var(--sf-iris). Nothing else tints.
+//   Colour: one accent, the app's iris, via var(--tl-iris). Nothing else tints.
 //
 // Every screen shown is a real capture from the app, never a rebuilt UI. Claims on
-// this page are taken from the Steadyfolio README and its planning record, so they
+// this page are taken from the Tillwise README and its planning record, so they
 // should be re-read whenever the app's scope moves.
 import type { Metadata } from 'next'
-import BetaCta from '@/components/steadyfolio/BetaCta'
-import PhoneShot from '@/components/steadyfolio/PhoneShot'
+import Link from 'next/link'
+import BetaCta from '@/components/tillwise/BetaCta'
+import PhoneShot from '@/components/tillwise/PhoneShot'
 import SectionReveal from '@/components/SectionReveal'
 
-const title = 'Steadyfolio — a private expense ledger for iPhone'
+const title = 'Tillwise — a private expense ledger for iPhone'
 const description =
-  'Steadyfolio records what you spend, on iPhone. No account, no bank login, nothing sent to a server.'
+  'Tillwise records what you spend, on iPhone. No account, no bank login, nothing sent to a server.'
 
 export const metadata: Metadata = {
   title,
   description,
-  openGraph: { title, description, url: '/steadyfolio', type: 'website' },
+  openGraph: { title, description, url: '/tillwise', type: 'website' },
   twitter: { card: 'summary_large_image', title, description },
-  alternates: { canonical: '/steadyfolio' },
+  alternates: { canonical: '/tillwise' },
 }
 
 const privacyFacts = [
@@ -38,22 +39,22 @@ const privacyFacts = [
     body: 'A file you keep wherever you like, plus a CSV export of one row per entry.',
   },
   {
-    heading: 'One network call',
-    body: 'Exchange rates, cached outside the ledger, and only while you leave them switched on.',
+    heading: 'Exchange rates only',
+    body: 'Public rates, downloaded at most once a day and only when you use more than one currency. You can switch them off.',
   },
 ]
 
-export default function SteadyfolioPage() {
+export default function TillwisePage() {
   return (
     <>
       {/* Hero: asymmetric split. Headline stays at two lines on desktop. */}
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-16 md:grid-cols-[6fr_4fr] md:gap-16 md:pb-28 md:pt-24">
         <SectionReveal animate="mount">
-          <h1 className="text-balance font-[family-name:var(--font-sf-display)] text-[2.6rem] font-semibold leading-[1.04] tracking-[-0.015em] md:text-[3.4rem]">
+          <h1 className="text-balance font-[family-name:var(--font-tl-display)] text-[2.6rem] font-semibold leading-[1.04] tracking-[-0.015em] md:text-[3.4rem]">
             An expense ledger that never leaves your phone.
           </h1>
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-[var(--sf-muted)] md:text-xl">
-            Steadyfolio records what you spend, on iPhone. No account, no bank login, nothing sent
+          <p className="mt-6 max-w-lg text-lg leading-relaxed text-[var(--tl-muted)] md:text-xl">
+            Tillwise records what you spend, on iPhone. No account, no bank login, nothing sent
             to a server.
           </p>
           <BetaCta className="mt-8" />
@@ -61,8 +62,8 @@ export default function SteadyfolioPage() {
 
         <SectionReveal animate="mount" delay={0.08}>
           <PhoneShot
-            src="/steadyfolio/today.png"
-            alt="Steadyfolio's Today screen, showing the amount spent today, the day's entries, an account that needs matching, and a chart of the month so far."
+            src="/tillwise/today.png"
+            alt="Tillwise's Today screen, showing the amount spent today, the day's entries, an account that needs matching, and a chart of the month so far."
             priority
             fade
             className="mx-auto max-w-[19rem] md:max-w-none"
@@ -73,30 +74,37 @@ export default function SteadyfolioPage() {
       {/* Privacy: full-width prose, no asset. Breaks the split rhythm on purpose. */}
       <section
         aria-labelledby="privacy-heading"
-        className="border-y border-[var(--sf-line)] bg-[var(--sf-surface)]/40"
+        className="border-y border-[var(--tl-line)] bg-[var(--tl-surface)]/40"
       >
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <SectionReveal>
             <div className="max-w-2xl">
               <h2
                 id="privacy-heading"
-                className="font-[family-name:var(--font-sf-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.6rem]"
+                className="font-[family-name:var(--font-tl-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.6rem]"
               >
                 Nothing leaves your phone.
               </h2>
-              <p className="mt-5 text-lg leading-relaxed text-[var(--sf-muted)]">
-                The whole ledger is one SQLite file in Steadyfolio&apos;s own folder. There is no
-                account to create and no server to sync it to.
+              <p className="mt-5 text-lg leading-relaxed text-[var(--tl-muted)]">
+                The whole ledger is one SQLite file in Tillwise&apos;s own folder. There is no
+                account to create and no server to sync it to.{' '}
+                <Link
+                  href="/tillwise/privacy"
+                  className="text-[var(--tl-ink)] underline underline-offset-[5px] transition-colors duration-150 hover:text-[var(--tl-iris)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--tl-iris)]"
+                >
+                  Read the privacy policy
+                </Link>
+                .
               </p>
             </div>
           </SectionReveal>
 
           <SectionReveal delay={0.08}>
-            <dl className="mt-14 grid gap-x-12 gap-y-10 border-t border-[var(--sf-line)] pt-10 sm:grid-cols-2">
+            <dl className="mt-14 grid gap-x-12 gap-y-10 border-t border-[var(--tl-line)] pt-10 sm:grid-cols-2">
               {privacyFacts.map((fact) => (
                 <div key={fact.heading}>
-                  <dt className="font-semibold text-[var(--sf-ink)]">{fact.heading}</dt>
-                  <dd className="mt-2 max-w-sm leading-relaxed text-[var(--sf-muted)]">
+                  <dt className="font-semibold text-[var(--tl-ink)]">{fact.heading}</dt>
+                  <dd className="mt-2 max-w-sm leading-relaxed text-[var(--tl-muted)]">
                     {fact.body}
                   </dd>
                 </div>
@@ -114,19 +122,19 @@ export default function SteadyfolioPage() {
         <SectionReveal>
           <h2
             id="entry-heading"
-            className="font-[family-name:var(--font-sf-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.4rem]"
+            className="font-[family-name:var(--font-tl-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.4rem]"
           >
             Three taps to record what you spent.
           </h2>
-          <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--sf-muted)]">
+          <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--tl-muted)]">
             The amount gets a calculator keypad instead of a text field. Recent payees fill in the
             category, the account and the last note.
           </p>
         </SectionReveal>
         <SectionReveal delay={0.08}>
           <PhoneShot
-            src="/steadyfolio/entry.png"
-            alt="Steadyfolio's new entry sheet, with a large amount, a calculator keypad, and chips for category, account and date."
+            src="/tillwise/entry.png"
+            alt="Tillwise's new entry sheet, with a large amount, a calculator keypad, and chips for category, account and date."
             className="mx-auto max-w-[17rem] md:ml-auto md:mr-0 md:max-w-[19rem]"
             width={304}
           />
@@ -140,19 +148,19 @@ export default function SteadyfolioPage() {
         <SectionReveal className="md:order-2">
           <h2
             id="match-heading"
-            className="font-[family-name:var(--font-sf-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.4rem]"
+            className="font-[family-name:var(--font-tl-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.4rem]"
           >
             It shows you the difference. It never quietly fixes it.
           </h2>
-          <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--sf-muted)]">
+          <p className="mt-5 max-w-md text-lg leading-relaxed text-[var(--tl-muted)]">
             Match asks whether an account agrees with your statement. If it does not, it names the
             difference and where to look, and never edits an entry itself.
           </p>
         </SectionReveal>
         <SectionReveal delay={0.08} className="md:order-1">
           <PhoneShot
-            src="/steadyfolio/match.png"
-            alt="Steadyfolio's Match screen, showing the difference against a statement, a list of places to look, and a tick-off list of entries."
+            src="/tillwise/match.png"
+            alt="Tillwise's Match screen, showing the difference against a statement, a list of places to look, and a tick-off list of entries."
             className="mx-auto max-w-[17rem] md:max-w-[19rem]"
             width={304}
           />
@@ -166,17 +174,17 @@ export default function SteadyfolioPage() {
         </h2>
         <div className="grid gap-6 md:grid-cols-[1.15fr_1fr_1fr]">
           <SectionReveal>
-            <article className="flex h-full flex-col justify-between gap-8 rounded-3xl bg-[var(--sf-surface)] p-7">
+            <article className="flex h-full flex-col justify-between gap-8 rounded-3xl bg-[var(--tl-surface)] p-7">
               <div>
                 <h3 className="text-xl font-semibold tracking-tight">Reports that show the sum</h3>
-                <p className="mt-3 leading-relaxed text-[var(--sf-muted)]">
+                <p className="mt-3 leading-relaxed text-[var(--tl-muted)]">
                   A month strip back to your first month, In, Out and Net, where it went with shares
                   and averages, and a grid of every day.
                 </p>
               </div>
               <PhoneShot
-                src="/steadyfolio/reports.png"
-                alt="Steadyfolio's Reports screen, showing a month strip, In, Out and Net totals, and spending by category with bars."
+                src="/tillwise/reports.png"
+                alt="Tillwise's Reports screen, showing a month strip, In, Out and Net totals, and spending by category with bars."
                 className="mx-auto w-full max-w-[15rem]"
                 width={240}
               />
@@ -184,15 +192,15 @@ export default function SteadyfolioPage() {
           </SectionReveal>
 
           <SectionReveal delay={0.06}>
-            <article className="flex h-full flex-col justify-between gap-8 rounded-3xl bg-[var(--sf-surface)] p-7">
+            <article className="flex h-full flex-col justify-between gap-8 rounded-3xl bg-[var(--tl-surface)] p-7">
               <div>
                 <h3 className="text-xl font-semibold tracking-tight">Light and dark, both real</h3>
-                <p className="mt-3 leading-relaxed text-[var(--sf-muted)]">
+                <p className="mt-3 leading-relaxed text-[var(--tl-muted)]">
                   It follows the phone&apos;s appearance, and every amount scales with Dynamic Type.
                 </p>
               </div>
               <PhoneShot
-                src="/steadyfolio/today-dark.png"
+                src="/tillwise/today-dark.png"
                 alt="The same Today screen in dark appearance."
                 className="mx-auto w-full max-w-[13rem]"
                 width={208}
@@ -201,15 +209,15 @@ export default function SteadyfolioPage() {
           </SectionReveal>
 
           <SectionReveal delay={0.12}>
-            <article className="flex h-full flex-col gap-4 rounded-3xl bg-[var(--sf-soft)] p-7">
+            <article className="flex h-full flex-col gap-4 rounded-3xl bg-[var(--tl-soft)] p-7">
               <h3 className="text-xl font-semibold tracking-tight">More than one currency</h3>
-              <p className="leading-relaxed text-[var(--sf-muted)]">
+              <p className="leading-relaxed text-[var(--tl-muted)]">
                 Entries keep the currency they were made in, and balances are never converted. A
                 total that adds up two currencies converts into your home currency, marks itself
-                with <span className="text-[var(--sf-ink)]">≈</span>, and footnotes the rate it used
+                with <span className="text-[var(--tl-ink)]">≈</span>, and footnotes the rate it used
                 and when.
               </p>
-              <p className="mt-auto pt-4 leading-relaxed text-[var(--sf-muted)]">
+              <p className="mt-auto pt-4 leading-relaxed text-[var(--tl-muted)]">
                 Past months use that month&apos;s average rate, so an old report does not change
                 when today&apos;s rate does.
               </p>
@@ -221,22 +229,22 @@ export default function SteadyfolioPage() {
       {/* Closing band. Same CTA label as the hero: one label per intent. */}
       <section
         aria-labelledby="beta-heading"
-        className="border-t border-[var(--sf-line)] bg-[var(--sf-surface)]/40"
+        className="border-t border-[var(--tl-line)] bg-[var(--tl-surface)]/40"
       >
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <SectionReveal>
             <h2
               id="beta-heading"
-              className="max-w-2xl text-balance font-[family-name:var(--font-sf-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.6rem]"
+              className="max-w-2xl text-balance font-[family-name:var(--font-tl-display)] text-3xl font-semibold leading-tight tracking-[-0.01em] md:text-[2.6rem]"
             >
-              Steadyfolio is in internal testing.
+              Tillwise is in internal testing.
             </h2>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--sf-muted)]">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--tl-muted)]">
               It is my daily expense tracker while the ledger earns its trust. A public App Store
               release comes after that.
             </p>
             <BetaCta className="mt-8" />
-            <p className="mt-6 text-[0.95rem] text-[var(--sf-tertiary)]">
+            <p className="mt-6 text-[0.95rem] text-[var(--tl-tertiary)]">
               iPhone, iOS 26 or later. Free, with no ads.
             </p>
           </SectionReveal>
