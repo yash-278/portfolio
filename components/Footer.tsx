@@ -18,7 +18,8 @@ export default function Footer() {
         <div>
           <p className="text-sm text-text-muted">© 2026 Yash Kadam</p>
         </div>
-        <div className="flex items-center gap-2">
+        {/* The home page's contact section lists these same profiles directly above. */}
+        <div className={pathname === '/' ? 'hidden' : 'flex items-center gap-2'}>
           <a
             href="https://github.com/yash-278"
             target="_blank"

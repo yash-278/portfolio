@@ -2,10 +2,12 @@
 import Image from 'next/image'
 import SectionReveal from '@/components/SectionReveal'
 
+// The headline already gives the role, so no row repeats it. This table is also the
+// only place the stack is listed.
 const facts = [
-  { label: 'Role', value: 'Technical Lead' },
-  { label: 'Company', value: 'KingsleyGate, since 2022' },
-  { label: 'Works in', value: 'TypeScript, React, Node.js, Go' },
+  { label: 'Currently', value: 'Technical Lead at KingsleyGate, since 2022' },
+  { label: 'Works in', value: 'TypeScript, React, Node.js, Go, PostgreSQL, Docker' },
+  { label: 'Building', value: 'Three iPhone apps, one in public beta' },
 ]
 
 export default function HeroSection() {
