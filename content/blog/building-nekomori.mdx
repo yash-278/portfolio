@@ -1,12 +1,12 @@
 ---
-title: "Building Nekomori: Sync Without the Pain"
+title: "How Nekomori syncs with AniList"
 date: "2026-05-20"
-description: "How I designed the data sync layer for Nekomori — keeping local watchlist state consistent with external anime APIs without hammering rate limits."
+description: "Nekomori used to call the AniList API on every page load and kept hitting the rate limit. I moved it to a local database with background sync."
 tags: ["nextjs", "typescript", "architecture", "react"]
 published: true
 ---
 
-# Building Nekomori: Sync Without the Pain
+# How Nekomori syncs with AniList
 
 Nekomori is an anime schedule tracker and personal watchlist manager. On the surface it sounds simple: pull data from an anime API, show it in a list, let the user mark episodes as watched. Two weeks into building it I had something that technically worked but felt terrible to use — slow, flaky, and leaking rate limit errors into the UI. This is the story of how I fixed it.
 

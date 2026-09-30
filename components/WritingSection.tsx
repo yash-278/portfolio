@@ -19,15 +19,18 @@ export default function WritingSection() {
   return (
     <section id="writing" aria-labelledby="writing-heading" className="scroll-mt-20">
       <SectionReveal delay={0.1}>
-        <h2 id="writing-heading" className="font-semibold text-text-muted">
+        <h2
+          id="writing-heading"
+          className="text-2xl font-semibold leading-tight tracking-tight text-text md:text-3xl"
+        >
           Writing
         </h2>
-        <ul className="mt-5 space-y-3">
+        <ul className="mt-6 space-y-3">
           {posts.map((post) => (
             <li key={post.slug}>
               <Link
                 href={`/blog/${post.slug}`}
-                className="block rounded-2xl bg-surface p-6 transition-colors duration-150 hover:bg-surface-raised focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="block rounded-[20px] bg-surface p-6 transition-colors duration-150 hover:bg-surface-raised focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <time dateTime={post.date} className="text-[0.925rem] text-text-muted">
                   {formatDate(post.date)}

@@ -26,14 +26,17 @@ export default function ContactSection() {
           <SectionReveal>
             <h2
               id="contact-heading"
-              className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight text-text md:text-[3.5rem]"
+              className="text-4xl font-semibold leading-[1.1] tracking-tight text-text md:text-[3.5rem]"
             >
-              Have a project, a role, or a problem you&apos;d like a second
-              opinion on?
+              Get in touch
             </h2>
+            <p className="mt-5 max-w-md text-lg leading-relaxed text-text-muted md:text-xl md:leading-relaxed">
+              Email me about a project, a role, or a problem you&apos;d like a
+              second opinion on.
+            </p>
             <a
               href="mailto:yashkadam278@gmail.com"
-              className="mt-7 inline-block text-xl text-accent underline underline-offset-[6px] transition-colors duration-150 hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:text-2xl"
+              className="mt-6 inline-block text-xl text-accent underline underline-offset-[6px] transition-colors duration-150 hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:text-2xl"
             >
               yashkadam278@gmail.com
             </a>
