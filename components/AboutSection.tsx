@@ -18,9 +18,10 @@ export default function AboutSection() {
             deployment pipelines behind them.
           </p>
           <p className="text-text-muted">
-            I learned by building things on my own and seeing what held up once
-            real people used them. These days more of my time goes into backend
-            systems and Go. My own projects are iPhone apps.
+            I learned by building things and seeing what held up once people used
+            them. Lately more of my time goes into backend systems and Go.
+            Outside work I build small apps I wanted for myself and publish the
+            ones that turn out well.
           </p>
         </div>
       </SectionReveal>

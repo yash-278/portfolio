@@ -7,7 +7,7 @@ import SectionReveal from '@/components/SectionReveal'
 const facts = [
   { label: 'Currently', value: 'Technical Lead at KingsleyGate, since 2022' },
   { label: 'Works in', value: 'TypeScript, React, Node.js, Go, PostgreSQL, Docker' },
-  { label: 'Building', value: 'Three iPhone apps, one in public beta' },
+  { label: 'On the side', value: 'These Days, a journal, and Tillwise, an expense tracker' },
 ]
 
 export default function HeroSection() {
@@ -23,7 +23,7 @@ export default function HeroSection() {
               Technical lead and fullstack developer.
             </h1>
             <p className="mt-5 max-w-xl text-xl leading-snug text-text-muted md:mt-7 md:text-2xl">
-              I&apos;m Yash Kadam. I build web products end to end, and lead the team that ships
+              I&apos;m Yash Kadam. I build web products end to end and lead the team behind
               them.
             </p>
           </SectionReveal>
@@ -41,7 +41,7 @@ export default function HeroSection() {
               ))}
               <div className="grid grid-cols-[6.5rem_1fr] gap-4 border-b border-border py-3">
                 <dt className="text-text-muted">Consulting</dt>
-                <dd className="font-medium text-accent">Taking on new work</dd>
+                <dd className="font-medium text-accent">Available for new work</dd>
               </div>
             </dl>
           </SectionReveal>

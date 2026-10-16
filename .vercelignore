@@ -1,0 +1,11 @@
+# Keep the design comparison and unrelated local prototypes on this Mac.
+app/these-days-designs
+app/portfolio-designs
+public/portfolio-designs
+components/these-days-designs
+prototypes
+docs
+AGENTS.md
+CLAUDE.md
+.env*
+*.tsbuildinfo
