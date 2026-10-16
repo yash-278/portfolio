@@ -9,8 +9,8 @@ import { usePathname } from 'next/navigation'
 export default function Footer() {
   const pathname = usePathname()
 
-  // See the matching note in Navbar: /tillwise ships its own footer.
-  if (pathname.startsWith('/tillwise')) return null
+  // Product pages carry their own footer.
+  if (pathname.startsWith('/tillwise') || pathname.startsWith('/these-days') || pathname.startsWith('/portfolio-designs')) return null
 
   return (
     <footer>

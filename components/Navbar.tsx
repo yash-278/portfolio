@@ -15,9 +15,8 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname()
 
-  // The Tillwise product page carries its own header and its own back-link home,
-  // so the portfolio chrome would read as a second, competing navigation.
-  if (pathname.startsWith('/tillwise')) return null
+  // Product pages carry their own navigation and link back to the portfolio.
+  if (pathname.startsWith('/tillwise') || pathname.startsWith('/these-days') || pathname.startsWith('/portfolio-designs')) return null
 
   return (
     <header className="fixed left-0 right-0 top-0 z-40 h-14 bg-bg/85 backdrop-blur-md">

@@ -1,11 +1,11 @@
 // Server Component — no 'use client'
-// Three iPhone apps at three different stages, so they get three different
-// treatments rather than one card repeated. Only Tillwise has a shipped UI, and
-// it is the only one shown with a screen; the other two are deliberately
-// typographic, because inventing a preview for an app with no code is a lie.
+// Product links and screenshots reflect each app's current development stage.
 import Image from 'next/image'
 import Link from 'next/link'
 import SectionReveal from '@/components/SectionReveal'
+import DeviceFrame from '@/components/these-days/DeviceFrame'
+import { APP_STORE_URL } from '@/components/these-days/app-store'
+import todayScreen from '@/public/these-days/today.png'
 
 interface Planned {
   name: string
@@ -26,17 +26,6 @@ const planned: Planned[] = [
       "The rest timer runs to a saved end time, so it can't drift",
     ],
   },
-  {
-    name: 'Journal app',
-    status: 'In planning',
-    description:
-      'A private journal built around the day, not the individual entry. It imports from the apps I already keep notes in.',
-    decisions: [
-      'Tags and people are typed inline, not picked from a list',
-      'No save button, and the sync state is always visible',
-      'It counts the days you wrote, never streaks',
-    ],
-  },
 ]
 
 export default function ProjectsSection() {
@@ -51,12 +40,13 @@ export default function ProjectsSection() {
             What I&apos;m building
           </h2>
           <p className="mt-4 max-w-xl leading-relaxed text-text-muted">
-            Three iPhone apps of my own, private by default and with no account to create.
-            Tillwise is in public beta. The other two are still being designed.
+            Side projects I build on my own time. Each one keeps your data on your phone and
+            needs no account. These Days is on the App Store, Tillwise is in public beta, and
+            a workout app is in design.
           </p>
         </SectionReveal>
 
-        {/* Featured: the one with a real app behind it. */}
+        {/* Tillwise is available in public beta. */}
         <SectionReveal delay={0.08}>
           <article className="mt-12 grid overflow-hidden rounded-[20px] bg-surface md:min-h-[30rem] md:grid-cols-[6fr_6fr]">
             <div className="flex flex-col p-7 md:p-14">
@@ -65,8 +55,8 @@ export default function ProjectsSection() {
               </h3>
               <p className="mt-3 text-[0.95rem] text-text-muted">In public beta</p>
               <p className="mt-5 max-w-md leading-relaxed text-text">
-                A private expense tracker for iPhone. It&apos;s a double-entry ledger underneath,
-                but recording a purchase takes three taps. Match checks an account against a bank
+                A private expense tracker for iPhone. Underneath it is a double-entry ledger, but
+                recording a purchase takes three taps. Match checks an account against a bank
                 statement and never edits an entry to make the numbers agree.
               </p>
               <p className="mt-auto pt-8 text-[0.95rem] text-text">
@@ -94,8 +84,44 @@ export default function ProjectsSection() {
           </article>
         </SectionReveal>
 
-        {/* The two that are still decisions rather than code. */}
+        {/* These Days is available on the App Store. */}
         <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <SectionReveal>
+            <article className="flex h-full flex-col overflow-hidden rounded-[20px] bg-surface">
+              <div className="flex flex-1 flex-col p-7 md:p-10">
+                <div className="flex items-center gap-3">
+                  <Image src="/these-days/icon.png" alt="" width={36} height={36} className="rounded-lg" />
+                  <h3 className="text-2xl font-semibold leading-none tracking-tight text-text md:text-3xl">These Days</h3>
+                </div>
+                <p className="mt-3 text-[0.95rem] text-text-muted">Available on the App Store</p>
+                <p className="mt-5 leading-relaxed text-text">
+                  A private journal for iPhone. Write a line or a longer entry, and come back to
+                  any day later. Tags, people and questions make old entries easy to find. Works
+                  offline, with optional iCloud sync.
+                </p>
+                <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
+                  <a
+                    href={APP_STORE_URL}
+                    className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 py-2.5 text-[0.95rem] font-semibold text-bg transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  >
+                    Download on the App Store
+                  </a>
+                  <Link
+                    href="/these-days"
+                    className="inline-flex min-h-11 items-center text-[0.95rem] font-semibold text-accent underline underline-offset-[5px] hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  >
+                    More about These Days
+                  </Link>
+                </div>
+              </div>
+              <div className="relative h-64 overflow-hidden bg-[#0e1a3c]" aria-hidden="true">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,#2b4bb5_0%,transparent_70%)] opacity-50" />
+                <div className="absolute inset-x-0 top-7 flex justify-center px-4">
+                  <DeviceFrame src={todayScreen} alt="" sizes="260px" className="[--device-width:260px]" />
+                </div>
+              </div>
+            </article>
+          </SectionReveal>
           {planned.map((project, i) => (
             <SectionReveal key={project.name} delay={i * 0.06}>
               <article className="flex h-full flex-col rounded-[20px] bg-surface p-7 md:p-10">

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yashkadam.com'),
   title: 'Yash Kadam — Technical Lead',
   description:
-    'Technical lead and fullstack developer. I build web products end to end, and lead the team that ships them.',
+    'Technical lead and fullstack developer. I build web products end to end and lead the team behind them.',
   openGraph: {
     images: [{ url: '/og.png', width: 1200, height: 630 }],
   },

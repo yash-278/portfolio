@@ -1,0 +1,47 @@
+.story { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.pinned { position: sticky; top: 72px; display: flex; flex-direction: column; align-items: center; gap: 28px; padding-block: 24px; }
+.stack { position: relative; display: grid; isolation: isolate; }
+.stack::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -30% -45%;
+  background: radial-gradient(closest-side, #5a82ff 0%, #2b4bb5 32%, transparent 70%);
+  opacity: 0.5;
+}
+/* The phone shrinks on short viewports so the pinned column, from 72px down, ends above the
+   fold with all four tabs in view. Frame height is 16px plus the screen at 2622/1206. */
+.phone { grid-area: 1 / 1; --device-width: clamp(220px, calc((100vh - 216px) / 2.174 + 16px), 320px); opacity: 0; transition: opacity 380ms ease; }
+.visible { opacity: 1; }
+.progress { display: flex; gap: 20px; margin: 0; padding: 0; list-style: none; font-size: 13px; color: #7f8ab0; }
+.progress li { position: relative; padding-top: 12px; transition: color 200ms; }
+.progress li::before { content: ''; position: absolute; top: 0; left: 50%; width: 5px; height: 5px; border-radius: 50%; background: currentColor; transform: translateX(-50%); }
+.current { color: #eef1fb; }
+
+.steps { display: flex; flex-direction: column; }
+.step { min-height: min(78vh, 720px); display: flex; flex-direction: column; justify-content: center; padding-block: 48px; }
+.stepName { font-size: 14px; color: #8f9bc6; }
+.step h3 { margin-top: 14px; font-size: clamp(34px, 3.4vw, 46px); line-height: 1.1; max-width: 420px; }
+.stepText { margin-top: 20px; max-width: 420px; font-size: 17px; line-height: 1.65; color: #b8c0dd; }
+.sample { margin: 34px 0 0; padding-left: 18px; border-left: 2px solid #3b63d9; max-width: 420px; }
+.sample blockquote { margin: 0; font-family: var(--font-nightfall-display), Georgia, serif; font-size: 22px; line-height: 1.4; color: #eef1fb; }
+.sample figcaption { margin-top: 10px; font-size: 13px; color: #8f9bc6; }
+.inlinePhone { display: none; --device-width: 280px; }
+
+@media (max-width: 1100px) { .phone { --device-width: clamp(220px, calc((100vh - 216px) / 2.174 + 16px), 280px); } .story { gap: 40px; } }
+
+/* Narrow or short viewports: no pinning, each step carries its own phone. */
+@media (max-width: 900px), (max-height: 620px) {
+  .story { grid-template-columns: 1fr; gap: 0; }
+  .pinned { display: none; }
+  .step { min-height: auto; padding-block: 36px; align-items: center; text-align: center; }
+  .step h3, .stepText, .sample { max-width: 460px; }
+  .sample { padding-left: 0; border-left: 0; }
+  .inlinePhone { display: block; margin: 36px auto 0; }
+}
+
+@media (max-width: 420px) { .inlinePhone { --device-width: 240px; } .step h3 { font-size: 30px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .phone, .progress li { transition: none; }
+}

@@ -1,0 +1,13 @@
+.article { width: min(720px, calc(100% - 48px)); margin-inline: auto; padding: 72px 0 96px; }
+.article h1 { font-size: clamp(2.6rem, 6vw, 3.6rem); line-height: 1.04; margin: 0; }
+.lead { margin-top: 24px; max-width: 34rem; font-size: 1.2rem; line-height: 1.6; color: var(--muted); }
+.effective { margin-top: 16px; font-size: 0.95rem; color: var(--quiet); }
+.sections { margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--line); display: grid; gap: 44px; }
+.sections h2 { font-size: 1.5rem; line-height: 1.2; margin: 0; }
+.sections p { margin-top: 12px; line-height: 1.7; color: var(--muted); }
+.sections a { color: var(--text); text-decoration: underline; text-underline-offset: 5px; }
+.sections a:hover { color: var(--glow); }
+
+@media (max-width: 640px) {
+  .article { padding: 48px 0 72px; }
+}

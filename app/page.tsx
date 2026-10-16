@@ -8,11 +8,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Yash Kadam — Technical Lead",
   description:
-    "Technical lead and fullstack developer. I build web products end to end, and lead the team that ships them.",
+    "Technical lead and fullstack developer. I build web products end to end and lead the team behind them.",
   openGraph: {
     title: "Yash Kadam — Technical Lead",
     description:
-      "Technical lead and fullstack developer. I build web products end to end, and lead the team that ships them.",
+      "Technical lead and fullstack developer. I build web products end to end and lead the team behind them.",
     url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://yashkadam.com",
     siteName: "Yash Kadam",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Yash Kadam — Technical Lead",
     description:
-      "Technical lead and fullstack developer. I build web products end to end, and lead the team that ships them.",
+      "Technical lead and fullstack developer. I build web products end to end and lead the team behind them.",
     images: ["/og.png"],
   },
 };
