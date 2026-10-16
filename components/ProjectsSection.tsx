@@ -46,79 +46,81 @@ export default function ProjectsSection() {
           </p>
         </SectionReveal>
 
-        {/* Tillwise is available in public beta. */}
+        {/* These Days is on the App Store, so it leads. */}
         <SectionReveal delay={0.08}>
           <article className="mt-12 grid overflow-hidden rounded-[20px] bg-surface md:min-h-[30rem] md:grid-cols-[6fr_6fr]">
             <div className="flex flex-col p-7 md:p-14">
-              <h3 className="text-4xl font-semibold leading-none tracking-tight text-text md:text-5xl">
-                Tillwise
-              </h3>
-              <p className="mt-3 text-[0.95rem] text-text-muted">In public beta</p>
+              <div className="flex items-center gap-4">
+                <Image src="/these-days/icon.png" alt="" width={48} height={48} className="rounded-xl" />
+                <h3 className="text-4xl font-semibold leading-none tracking-tight text-text md:text-5xl">
+                  These Days
+                </h3>
+              </div>
+              <p className="mt-3 text-[0.95rem] text-text-muted">On the App Store</p>
               <p className="mt-5 max-w-md leading-relaxed text-text">
-                A private expense tracker for iPhone. Underneath it is a double-entry ledger, but
-                recording a purchase takes three taps. Match checks an account against a bank
-                statement and never edits an entry to make the numbers agree.
+                A private journal for iPhone. Write a line or a longer entry, and come back to
+                any day later. Tags, people and questions make old entries easy to find. Works
+                offline, with optional iCloud sync.
               </p>
               <p className="mt-auto pt-8 text-[0.95rem] text-text">
                 <span className="block text-text-muted">Built with</span>
-                Swift 6, SwiftUI, GRDB
+                Swift 6, SwiftUI, SQLite, CloudKit
               </p>
-              <Link
-                href="/tillwise"
-                className="mt-5 self-start rounded-full bg-accent px-5 py-2.5 text-[0.95rem] font-semibold text-bg transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                See Tillwise
-              </Link>
+              <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <a
+                  href={APP_STORE_URL}
+                  className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 py-2.5 text-[0.95rem] font-semibold text-bg transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  Download on the App Store
+                </a>
+                <Link
+                  href="/these-days"
+                  className="inline-flex min-h-11 items-center text-[0.95rem] font-semibold text-accent underline underline-offset-[5px] hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  More about These Days
+                </Link>
+              </div>
             </div>
-            {/* A real capture from the app, cropped from the top. */}
-            <div className="relative min-h-[22rem] overflow-hidden bg-surface-raised" aria-hidden="true">
-              <Image
-                src="/tillwise/today.png"
-                alt=""
-                width={644}
-                height={1400}
-                sizes="(min-width: 768px) 20rem, 60vw"
-                className="absolute left-1/2 top-12 w-[16rem] -translate-x-1/2 rounded-t-[1.75rem] shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)] md:w-[20rem]"
-              />
+            <div className="relative min-h-[22rem] overflow-hidden bg-[#0e1a3c]" aria-hidden="true">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,#2b4bb5_0%,transparent_70%)] opacity-50" />
+              <div className="absolute inset-x-0 top-12 flex justify-center px-4">
+                <DeviceFrame src={todayScreen} alt="" sizes="(min-width: 768px) 300px, 260px" className="[--device-width:260px] md:[--device-width:300px]" />
+              </div>
             </div>
           </article>
         </SectionReveal>
 
-        {/* These Days is available on the App Store. */}
+        {/* Tillwise is in public beta. */}
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           <SectionReveal>
             <article className="flex h-full flex-col overflow-hidden rounded-[20px] bg-surface">
               <div className="flex flex-1 flex-col p-7 md:p-10">
-                <div className="flex items-center gap-3">
-                  <Image src="/these-days/icon.png" alt="" width={36} height={36} className="rounded-lg" />
-                  <h3 className="text-2xl font-semibold leading-none tracking-tight text-text md:text-3xl">These Days</h3>
-                </div>
-                <p className="mt-3 text-[0.95rem] text-text-muted">Available on the App Store</p>
+                <h3 className="text-2xl font-semibold leading-none tracking-tight text-text md:text-3xl">
+                  Tillwise
+                </h3>
+                <p className="mt-3 text-[0.95rem] text-text-muted">In public beta</p>
                 <p className="mt-5 leading-relaxed text-text">
-                  A private journal for iPhone. Write a line or a longer entry, and come back to
-                  any day later. Tags, people and questions make old entries easy to find. Works
-                  offline, with optional iCloud sync.
+                  A private expense tracker for iPhone. Underneath it is a double-entry ledger, but
+                  recording a purchase takes three taps. Match checks an account against a bank
+                  statement and never edits an entry to make the numbers agree.
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
-                  <a
-                    href={APP_STORE_URL}
-                    className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 py-2.5 text-[0.95rem] font-semibold text-bg transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                  >
-                    Download on the App Store
-                  </a>
-                  <Link
-                    href="/these-days"
-                    className="inline-flex min-h-11 items-center text-[0.95rem] font-semibold text-accent underline underline-offset-[5px] hover:text-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                  >
-                    More about These Days
-                  </Link>
-                </div>
+                <Link
+                  href="/tillwise"
+                  className="mt-6 inline-flex min-h-11 items-center self-start rounded-full bg-accent px-5 py-2.5 text-[0.95rem] font-semibold text-bg transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  See Tillwise
+                </Link>
               </div>
-              <div className="relative h-64 overflow-hidden bg-[#0e1a3c]" aria-hidden="true">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,#2b4bb5_0%,transparent_70%)] opacity-50" />
-                <div className="absolute inset-x-0 top-7 flex justify-center px-4">
-                  <DeviceFrame src={todayScreen} alt="" sizes="260px" className="[--device-width:260px]" />
-                </div>
+              {/* A real capture from the app, cropped from the top. */}
+              <div className="relative h-64 overflow-hidden bg-surface-raised" aria-hidden="true">
+                <Image
+                  src="/tillwise/today.png"
+                  alt=""
+                  width={644}
+                  height={1400}
+                  sizes="260px"
+                  className="absolute left-1/2 top-7 w-[14rem] -translate-x-1/2 rounded-t-[1.5rem] shadow-[0_30px_70px_-20px_rgba(0,0,0,0.6)]"
+                />
               </div>
             </article>
           </SectionReveal>
